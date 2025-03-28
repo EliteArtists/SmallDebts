@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Small Debts</title>
+  <meta name="description" content="Small Debts - We're here to help you fight back against unfair charges or company mistakes.">
+  <meta name="keywords" content="debt help, unfair charges, claim support, admin help, Small Debts">
+  <meta name="author" content="Small Debts">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Small Debts | Here to Help</title>
 </head>
 <body>
+
+  <!-- Header / Logo -->
   <header>
-    <img src="https://smalldebts.co.uk/path-to-logo.png" alt="Small Debts Logo" class="logo" />
+    <img src="logo.png" alt="Small Debts Logo" id="logo" />
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -20,20 +26,34 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <img src="https://smalldebts.co.uk/path-to-main-image.png" alt="Man shocked at bill" />
-    <div class="circle-text">Have you been wronged?</div>
-    <p class="contact-line">
-      0208 058 0381 | support@smalldebts.co.uk | 07908 479 765
-    </p>
-    <a href="https://wa.me/447908479765" class="whatsapp-btn">Chat With Us on WhatsApp</a>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-image">
+      <img src="hero.jpg" alt="Person looking shocked at bill" />
+      <div class="hero-text">
+        <h1>Have You Been Wronged?</h1>
+      </div>
+    </div>
+    <div class="contact-details">
+      <p>0208 058 0381 &nbsp; | &nbsp; support@smalldebts.co.uk &nbsp; | &nbsp; 07908 479 765</p>
+    </div>
+    <div class="cta-button">
+      <a href="https://wa.me/447908479765" target="_blank">Chat with us on WhatsApp</a>
+    </div>
   </section>
 
-  <section class="how-can-we-help">
+  <!-- Info Section -->
+  <section id="info">
     <h2>How Can We Help?</h2>
-    <!-- Add your content here -->
+    <p>We help you claim back money when companies have overcharged, misled, or wronged you. Submit your case, and we handle the rest.</p>
   </section>
 
-  <script src="scripts.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Small Debts. All rights reserved.</p>
+  </footer>
+
+  <!-- Local JS -->
+  <script src="scripts.js" defer></script>
 </body>
 </html>
