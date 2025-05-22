@@ -50,34 +50,20 @@
 </section>
 
     <!-- Contact Form Section -->
-    <section class="contact-form">
-      <form action="https://formspree.io/f/mwkjzgrz" method="POST">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="phone">Telephone (optional)</label>
-        <input type="tel" id="phone" name="phone" />
-
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required />
-
-        <label for="message">Message / Details</label>
-        <textarea id="message" name="message" rows="8" required></textarea>
-
-        <!-- Optional: File upload (if needed) -->
-        <!--
-        <label for="attachment">Attach Supporting Documents (optional)</label>
-        <input type="file" id="attachment" name="attachment">
-        -->
-
-        <button type="submit">Submit</button>
-      </form>
-      <p class="form-note">
-        By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.
-      </p>
+    <section class="contact-form" style="background-color: #f9f9f9; padding: 40px 20px; border-radius: 8px; max-width: 600px; margin: 40px auto;">
+  <form action="https://formspree.io/f/mwkjzgrz" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+    <input type="text" id="name" name="name" placeholder="Your Name" required />
+    <input type="tel" id="phone" name="phone" placeholder="Your Mobile Number" />
+    <input type="email" id="email" name="email" placeholder="Email*" required />
+    <textarea id="message" name="message" rows="5" placeholder="Brief details on the goods or services provided" required></textarea>
+    <input type="text" name="company" placeholder="Company or Business Name" />
+    <input type="text" name="address" placeholder="Company Address" />
+    <button type="submit" style="background-color: #222; color: white; padding: 12px 20px; border: none; cursor: pointer; font-weight: bold;">Submit</button>
+  </form>
+  <p class="form-note" style="text-align: center; font-size: 14px; margin-top: 20px;">
+    By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.
+  </p>
+</section>
     </section>
   </main>
 
