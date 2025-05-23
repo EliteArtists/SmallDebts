@@ -93,8 +93,8 @@ nav ul li a {
 }
 .hero-button {
   position: absolute;
-  top: 100%;
-  right: 30%;
+  top: 120%;
+  right: 40%;
   z-index: 10;
 }
 
