@@ -156,12 +156,11 @@ body {
 /* --------------------- */
 /* HEADER STYLING */
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    max-width: 1280px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;   /* Increase side padding */
+  max-width: 100%;        /* Remove hard limit */
 }
 
 .logo img {
