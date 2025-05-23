@@ -165,8 +165,10 @@ body {
 }
 
 .logo img {
-    height: 75px; 
-    margin-right: 2rem;
+  height: 85px;        /* Make the logo taller */
+  margin-right: 2rem;
+  max-width: none;     /* Prevent it being squashed */
+  width: auto;
 }
 
 .logo {
