@@ -99,8 +99,8 @@ nav ul li a {
 }
 .hero-contacts {
   position: absolute;
-  top: 110%;
-  right: 5%;
+  top: 100%;
+  right: 40%;
   text-align: right;
   color: #000;
   font-size: 1rem;
