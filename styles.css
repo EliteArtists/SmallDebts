@@ -170,8 +170,12 @@ body {
 }
 
 .logo img {
-    height: 50px;
-    display: block;
+    height: 65px; 
+    margin-right: 2rem;
+}
+
+.logo {
+    margin-right: auto;
 }
 
 /* --------------------- */
