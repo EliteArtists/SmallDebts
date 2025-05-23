@@ -108,7 +108,7 @@ nav ul li a {
   margin-top: 1.5rem;
 }
 
-.cta-button a {
+a.cta-button {
   display: inline-block;
   padding: 0.75rem 2rem;
   background-color: #000;
