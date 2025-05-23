@@ -26,11 +26,6 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-#logo {
-  max-width: 200px;
-  margin-bottom: 0.5rem;
-}
-
 nav ul {
   list-style: none;
   display: flex;
