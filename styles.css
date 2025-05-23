@@ -50,21 +50,19 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-  background: url('hero.jpg') no-repeat center center / cover;
-  height: 100vh;
+  background-image: url('hero.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
-.hero-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  background: url('hero.jpg') no-repeat center center / cover;
-}
 .hero-image {
   position: relative;
   max-width: 900px;
