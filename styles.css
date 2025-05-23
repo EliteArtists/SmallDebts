@@ -91,6 +91,12 @@ nav ul li a {
   padding: 1.5rem;
   z-index: 10;
 }
+.hero-button {
+  position: absolute;
+  top: 55%;
+  right: 5%;
+  z-index: 10;
+}
 
 .contact-details {
   margin-top: 1rem;
