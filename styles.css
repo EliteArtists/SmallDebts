@@ -165,7 +165,7 @@ body {
 }
 
 .logo img {
-  height: 100px;        /* Make the logo taller */
+  height: 95px;        /* Make the logo taller */
   margin-right: 2rem;
   max-width: none;     /* Prevent it being squashed */
   width: auto;
