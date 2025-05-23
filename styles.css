@@ -97,6 +97,16 @@ nav ul li a {
   right: 40%;
   z-index: 10;
 }
+.hero-contacts {
+  position: absolute;
+  top: 110%;
+  right: 5%;
+  text-align: right;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.5;
+  z-index: 10;
+}
 
 .contact-details {
   margin-top: 1rem;
