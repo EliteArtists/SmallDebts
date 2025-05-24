@@ -109,7 +109,8 @@ nav ul li a {
 }
 #hero {
   position: relative;
-  min-height: 500px;
+  min-height: 700px;
+  margin-bottom: 3rem; /* creates space between hero and next section */
 }
 .contact-details {
   margin-top: 1rem;
