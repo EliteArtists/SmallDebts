@@ -265,5 +265,5 @@ body {
   background-color: #fff;       /* Ensures clean white background */
   position: relative;
   z-index: 10;                  /* Stacks above hero */
-  margin-top: 1700px;           /* Pulls the white section upward */
+  margin-top: 1800px;           /* Pulls the white section upward */
 }
