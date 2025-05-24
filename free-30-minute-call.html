@@ -51,40 +51,28 @@
 </header>
 
   <!-- Main Content -->
-  <main class="form-page">
-    <!-- Intro Section -->
-    <section class="intro">
-      <h1>Free 30 Minute Call</h1>
-      <p>
-        We offer a free 30 minute consultation call to discuss your case and determine the best way forward.
-        No obligation – just a friendly chat with our experts to understand your situation and how we can help.
-      </p>
-    </section>
-
-    <!-- Free Call Form Section -->
-    <section class="contact-form">
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required />
-
-        <label for="preferred-date">Preferred Date and Time</label>
-        <input type="text" id="preferred-date" name="preferred_date" placeholder="e.g., July 20, 2025 at 2:00 PM" required />
-
-        <label for="message">Additional Details (Optional)</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <button type="submit">Book My Free Call</button>
+<main class="form-layout">
+  <div class="form-box">
+    <section class="contact-form" style="background-color: #f9f9f9; padding: 40px 20px; border-radius: 8px;">
+      <form action="https://formspree.io/f/xpzvygjb" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <input type="text" name="name" placeholder="Name" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc;" />
+        <input type="email" name="email" placeholder="Email*" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc;" />
+        <textarea name="message" rows="5" placeholder="Message" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+        <button type="submit" style="background-color: #222; color: white; padding: 12px 20px; border: none; border-radius: 6px; font-weight: bold;">Send</button>
       </form>
-      <p class="form-note">
-        We respect your privacy. Your information will not be shared.
-      </p>
     </section>
+  </div>
+
+  <div class="form-text">
+    <h1>Free 30 Minute Consultation</h1>
+    <p><strong>How can we help?</strong></p>
+    <p>We'll do everything we can to help you gain justice and peace of mind...</p>
+    <p>Tell us when you're available between the times listed below, and we'll email you to confirm an appointment.</p>
+    <p><strong>support@smalldebts.co.uk</strong></p>
+    <p><strong>Hours</strong><br />Today: Closed</p>
+  </div>
+</main>
+
   </main>
 
   <!-- Footer -->
