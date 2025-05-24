@@ -376,3 +376,34 @@ body {
   flex: 1 1 30%;
   text-align: center;
 }
+#cta {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cta-buttons {
+  margin: 2rem 0;
+}
+
+.cta-button {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #333;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
