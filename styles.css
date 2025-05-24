@@ -109,8 +109,10 @@ nav ul li a {
 }
 #hero {
   position: relative;
-  min-height: 700px;
-  margin-bottom: 3rem; /* creates space between hero and next section */
+  min-height: 950px; /* pushes content down */
+  margin-bottom: 6rem; /* adds space between hero and next section */
+  background-size: cover;
+  background-position: center;
 }
 .contact-details {
   margin-top: 1rem;
