@@ -267,3 +267,38 @@ body {
   z-index: 10;                  /* Stacks above hero */
   margin-top: 1800px;           /* Pulls the white section upward */
 }
+/* MARQUEE TICKER STYLES */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 30s linear infinite;
+}
+
+.ticker-content span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  padding: 0 2rem;
+}
+
+.ticker-wrap:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
