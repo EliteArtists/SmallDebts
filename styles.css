@@ -412,3 +412,29 @@ body {
   justify-content: center;
   margin: 2rem 0;
 }
+.form-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+  flex-wrap: wrap;
+}
+
+.form-text {
+  flex: 1;
+  min-width: 300px;
+  font-size: 1rem;
+}
+
+.form-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.form-box {
+  flex: 1;
+  min-width: 300px;
+}
