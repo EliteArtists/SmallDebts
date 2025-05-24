@@ -407,3 +407,8 @@ body {
   justify-content: center;
   margin-top: 2rem;
 }
+.whatsapp-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
