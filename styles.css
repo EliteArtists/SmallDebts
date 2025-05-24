@@ -109,15 +109,13 @@ nav ul li a {
 }
 #hero {
   position: relative;
-  min-height: 950px;
-  margin-bottom: 6rem;
+  min-height: 600px;  /* Previously 950px — reduces vertical space */
+  margin-bottom: 2rem;  /* Previously 6rem — reduces gap below hero */
   background-size: cover;
   background-position: center;
+  z-index: 1; /* Needed so content can layer above if necessary */
 }
 
-#services {
-  padding-top: 170rem; /* adjust if needed */
-}
 .contact-details {
   margin-top: 1rem;
   font-size: 1.1rem;
@@ -262,4 +260,10 @@ body {
 .dropdown-menu a {
     display: block;
     padding: 0.75rem 1rem;
+}
+.scrollable-content {
+  background-color: #fff;       /* Ensures clean white background */
+  position: relative;
+  z-index: 10;                  /* Stacks above hero */
+  margin-top: -150px;           /* Pulls the white section upward */
 }
