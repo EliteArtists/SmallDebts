@@ -304,6 +304,6 @@ body {
 }
 /* Reposition and style the services section */
 .services-wrapper {
-  margin-top: -900px; /* Adjust this number until the section sits right under the ticker */
+  margin-top: -1100px; /* Adjust this number until the section sits right under the ticker */
   padding-top: 2rem;
 }
