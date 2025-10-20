@@ -733,3 +733,57 @@ h2 {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* --- CSS ADDITIONS FOR contact.html --- */
+
+.contact-grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form-wrapper h2, .direct-contact-info h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-form-wrapper .simple-form {
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.direct-contact-info h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-details i {
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+    width: 1.5rem; /* for alignment */
+    text-align: center;
+}
+
+/* Desktop Contact Layout */
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+    }
+}
