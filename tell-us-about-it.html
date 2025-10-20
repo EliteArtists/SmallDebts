@@ -1,98 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tell us about your unfair charge or administrative issue and let us help you get the resolution you deserve." />
-  <meta name="author" content="Small Debts" />
-  <meta name="theme-color" content="#000000" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use this simple form to submit details about your complaint or debt recovery case for the £12.50 email service.">
+    
+    <title>Tell Us About It — Small Debts</title>
 
-  <title>Tell Us About It | Small Debts</title>
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8u4z9T+FzYI7s5Y+Y/Xv6Z/Vq+z/R+wP2f1x+A3z92+j+A2a4p8t2y2oG+G+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header -->
 <header class="site-header">
-  <div class="container header-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Small Debts Logo" />
-      </a>
+    <div class="header-content container">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Small Debts Logo" height="30" />
+        </a>
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-navigation" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tell-us-about-it.html">Tell Us About It</a></li>
+                <li><a href="accounts-department.html">Outsourced Accounts Dept</a></li>
+                <li><a href="tenant-advocate.html">Tenant Advocate</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="main-navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="leaseplan.html">LeasePlan/Ayvens</a></li>
-        <li><a href="tell-us-about-it.html">Tell Us About It</a></li>
-        <li><a href="tenant-advocate.html">Tenant Advocate</a></li>
-        <li><a href="free-30-minute-call.html">Free 30 Minute Call</a></li>
-        <li class="more-dropdown">
-          <a href="#">More &#9662;</a>
-          <ul class="dropdown-menu">
-            <li><a href="contact-us.html">Contact Us</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="payments.html">Payments</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
 </header>
 
-  <!-- Main Content -->
-<main class="form-page">
-  <section class="form-layout">
-    <div class="form-text">
-      <h1>TELL US ABOUT IT</h1>
-      <p>
-        We accept instructions of all shapes and sizes.<br />
-        We accept instructions against companies and individuals.<br /><br />
-        <strong>Email:</strong> support@smalldebts.co.uk<br />
-        <strong>Phone:</strong> 0208 058 0381
-      </p>
-    </div>
-    <div class="form-box">
+<main>
+    <section id="tell-us-form" class="section-padded container">
+        <h1 class="page-title text-center">Tell Us About Your Complaint</h1>
+        
+        <div class="intro-text text-center">
+            <p class="lead-text">
+                Use the form below to provide the necessary details for our **$\text{£12.50}$ Complaint Email Service**. We will review your case and draft a formal, professionally worded email to the company or individual on your behalf.
+            </p>
+        </div>
 
-    <!-- Contact Form Section -->
-    <section class="contact-form" style="background-color: #f9f9f9; padding: 40px 20px; border-radius: 8px; max-width: 600px; margin: 40px auto;">
-  <form action="https://formspree.io/f/mwkjzgrz" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-    <input type="text" id="name" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; width: 100%;" />
-    <input type="tel" id="phone" name="phone" placeholder="Your Mobile Number" style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; width: 100%;" />
-    <input type="email" id="email" name="email" placeholder="Email*" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; width: 100%;" />
-    <textarea id="message" name="message" rows="5" placeholder="Brief details on the goods or services provided" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; width: 100%;"></textarea>
-    <input type="text" name="company" placeholder="Company or Business Name" style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; width: 100%;" />
-    <input type="text" name="address" placeholder="Company Address" style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; width: 100%;" />
-    <button type="submit" style="background-color: #222; color: white; padding: 12px 20px; border: none; cursor: pointer; font-weight: bold;">Submit</button>
-  </form>
-  <p class="form-note" style="text-align: center; font-size: 14px; margin-top: 20px;">
-    By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.
-  </p>
-</section>
+        <form id="complaint-form" action="#" method="POST" class="simple-form">
+            
+            <fieldset class="user-details">
+                <legend>Your Details</legend>
+                <input type="text" name="Your Name" placeholder="Your Name*" required>
+                <input type="email" name="Your Email" placeholder="Email*" required>
+                <input type="tel" name="Your Mobile Number" placeholder="Your Mobile Number">
+            </fieldset>
+
+            <fieldset class="issue-details">
+                <legend>Issue Details</legend>
+                <textarea name="Brief Description of Issue" rows="5" placeholder="Brief details on the goods, services, or nature of the complaint (The Debtor's side of the story) *" required></textarea>
+                <input type="text" name="Total Debt To Be Recovered" placeholder="Total Amount Involved (£, if applicable)">
+                <textarea name="Timeline of Events" rows="5" placeholder="Timeline of Events (When did this happen? What were the key dates and conversations?) *" required></textarea>
+                
+                <div class="file-upload">
+                    <label for="attachments">Attach Invoices or proof:</label>
+                    <input type="file" id="attachments" name="Attachments" multiple>
+                    <small>Note: File uploads often require a third-party form service account. Please limit file size.</small>
+                </div>
+            </fieldset>
+            
+            <fieldset class="debtor-details">
+                <legend>Company / Debtor Details</legend>
+                <input type="text" name="Company or Business Name" placeholder="Company or Business Name*" required>
+                <input type="text" name="Company Address" placeholder="Company Address">
+                <input type="url" name="Company Website" placeholder="Company Website (Optional)">
+                <input type="text" name="Debtor Contact Name" placeholder="Contact Name (e.g., Accounts Dept.)">
+                <input type="tel" name="Debtor Contact Telephone Number" placeholder="Contact Telephone Number (Optional)">
+                <input type="email" name="Debtor Contact Email Address" placeholder="Contact Email Address (Optional)">
+            </fieldset>
+
+            <button type="submit" class="cta-button primary submit-button">
+                Submit Case
+            </button>
+        </form>
+        
+        <p class="disclosure-text text-center">
+            **Disclosure:** Each message/email costs **$\text{£12.50}$** — we’ll confirm all details and fees before sending anything on your behalf.
+        </p>
     </section>
-  </main>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Small Debts. All rights reserved.</p>
-    <nav>
-      <ul>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      </ul>
-    </nav>
-  </footer>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-contact">
+            <p><strong>Call Us:</strong> 0208 058 0381 | <strong>Email:</strong> support@smalldebts.co.uk</p>
+            <p><strong>WhatsApp:</strong> 07908 479 765 | <a href="https://wa.me/447908479765" target="_blank" rel="noopener noreferrer">Chat with Us Now</a></p>
+        </div>
+        <div class="footer-social">
+            <p>Connect With Us</p>
+            <a href="#" aria-label="Find us on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Follow us on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Watch us on YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 smalldebts.co.uk - All Rights Reserved.</p>
+            <nav class="footer-nav">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="scripts.js" defer></script>
+<script src="scripts.js"></script>
 </body>
 </html>
