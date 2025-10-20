@@ -610,3 +610,126 @@ h2 {
     .pricing-table-wrapper td { display: block; text-align: right; border: none; }
     .pricing-table-wrapper td:before { content: attr(data-label); float: left; font-weight: bold; text-transform: uppercase; }
 } */
+
+/* --- CSS ADDITIONS FOR pricing.html --- */
+
+.pricing-card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; /* Stacked on mobile */
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pricing-card .card-header {
+    background-color: #f7f7f7;
+    padding: 2rem 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.pricing-card i {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price-tag {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+}
+
+.pricing-card .card-body {
+    padding: 1.5rem;
+    flex-grow: 1; /* Ensures equal card height */
+    text-align: left;
+}
+
+.pricing-card .card-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card .card-body li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.pricing-card .card-body li i {
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+}
+
+.pricing-card .card-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Highlighted Card */
+.pricing-card.highlighted {
+    border-color: var(--color-accent);
+    box-shadow: 0 5px 15px rgba(0, 167, 181, 0.15);
+}
+
+.pricing-card.highlighted .card-header {
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+}
+
+.pricing-card.highlighted h2, 
+.pricing-card.highlighted .price-tag {
+    color: var(--color-secondary);
+}
+
+/* Add-ons Section */
+.add-ons-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.add-ons-section h3 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.add-on-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.add-on-list p {
+    font-weight: 700;
+}
+
+.add-on-list i {
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+}
+
+
+/* Desktop Pricing Layout */
+@media (min-width: 768px) {
+    .pricing-card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
