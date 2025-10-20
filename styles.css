@@ -520,3 +520,93 @@ h2 {
     margin-top: 1rem;
     font-size: 1.1rem;
 }
+
+/* --- CSS ADDITIONS FOR accounts-department.html --- */
+
+/* Pricing Table Styles (Responsive) */
+.pricing-table-wrapper {
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    margin: 2rem 0;
+}
+
+.pricing-table-wrapper table {
+    width: 100%;
+    min-width: 600px; /* Ensures table is readable on mobile scroll */
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.pricing-table-wrapper th, 
+.pricing-table-wrapper td {
+    padding: 1rem;
+    border: 1px solid #eee;
+    vertical-align: top;
+}
+
+.pricing-table-wrapper thead th {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pricing-table-wrapper tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.pricing-table-wrapper .highlighted-row {
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+}
+
+.pricing-table-wrapper .highlighted-row strong {
+    color: var(--color-secondary);
+}
+
+/* "How It Works" Grid */
+.works-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+}
+
+.work-step {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.work-step i {
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+}
+
+.work-step h3 {
+    text-transform: none;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Media Query for Desktop: Pricing Table and How It Works */
+@media (min-width: 768px) {
+    .works-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .pricing-table-wrapper table {
+        min-width: 100%; /* Use full width on desktop */
+    }
+}
+
+/* Responsive Table Td Labels (Optional for Mobile) 
+   This makes data-label attributes show up on very small screens, 
+   but since we set a min-width on the table, it might not be needed. */
+/* @media (max-width: 600px) {
+    .pricing-table-wrapper thead { display: none; }
+    .pricing-table-wrapper tr { display: block; margin-bottom: 1rem; border: 1px solid #ccc; }
+    .pricing-table-wrapper td { display: block; text-align: right; border: none; }
+    .pricing-table-wrapper td:before { content: attr(data-label); float: left; font-weight: bold; text-transform: uppercase; }
+} */
