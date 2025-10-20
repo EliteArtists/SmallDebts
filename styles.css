@@ -787,3 +787,47 @@ h2 {
         grid-template-columns: 1fr 1fr; /* Two columns on desktop */
     }
 }
+
+/* --- CSS ADDITIONS FOR reviews.html --- */
+
+.review-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr; /* Stacked on mobile */
+    margin-bottom: 2rem;
+}
+
+.review-card {
+    background-color: var(--color-secondary);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.review-card .stars {
+    color: #FFD700; /* Gold color for stars */
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.review-text {
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.review-meta {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Desktop Review Layout */
+@media (min-width: 768px) {
+    .review-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
