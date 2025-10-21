@@ -263,11 +263,10 @@ h2 {
     background-color: #f7f7f7; /* Light grey background for the box */
 }
 
-
 /* --- 9. FOOTER --- */
 .site-footer {
     background-color: #f7f7f7;
-    padding: 2rem 0 1rem; /* Slightly less padding */
+    padding: 2rem 0 1rem;
     border-top: 1px solid #ddd;
     font-size: 0.9rem;
 }
@@ -279,26 +278,27 @@ h2 {
     gap: 1.5rem;
 }
 
-/* New Contact Bar Styling */
+/* 9.1: Top Contact Bar Styling */
 .footer-contact-bar {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
     justify-content: center;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #e0e0e0;
-    gap: 0.5rem 1rem; /* Vertical and horizontal gap */
+    gap: 0.5rem 1rem; /* Vertical and horizontal gap between items */
     font-weight: 700;
 }
 
 .footer-contact-bar a {
-    color: var(--color-primary); /* Keep links black for professionalism */
+    color: var(--color-primary); /* Links are black (prominent and readable) */
+    text-decoration: none;
 }
 
 .footer-contact-bar a:hover {
-    color: var(--color-accent); /* Highlight on hover */
+    color: var(--color-accent);
 }
 
-/* New Bottom Bar Styling */
+/* 9.2: Bottom Bar (Copyright & Navigation) Styling */
 .footer-bottom-bar {
     display: flex;
     flex-direction: column;
@@ -317,13 +317,17 @@ h2 {
 }
 
 
-/* Desktop Footer Layout */
+/* Desktop Layout (768px and up) */
 @media (min-width: 768px) {
+    /* 9.1: Desktop Contact Bar */
     .footer-contact-bar {
-        flex-wrap: nowrap; /* Forces content onto one line on desktop */
-        justify-content: space-around; /* Spreads out contact details */
+        flex-wrap: nowrap; /* Forces contact details onto one line */
+        justify-content: space-between; /* Spreads contact details evenly */
+        padding-left: 2rem; /* Add horizontal spacing for alignment */
+        padding-right: 2rem;
     }
-
+    
+    /* 9.2: Desktop Bottom Bar */
     .footer-bottom-bar {
         flex-direction: row;
         justify-content: space-between;
