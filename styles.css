@@ -267,7 +267,7 @@ h2 {
 /* --- 9. FOOTER --- */
 .site-footer {
     background-color: #f7f7f7;
-    padding: 3rem 0 1rem;
+    padding: 2rem 0 1rem; /* Slightly less padding */
     border-top: 1px solid #ddd;
     font-size: 0.9rem;
 }
@@ -276,43 +276,60 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem; /* Reduced gap for better mobile spacing */
-}
-
-.footer-contact {
-    /* Contact info area */
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.footer-social {
-    /* Social icon area */
-    margin-bottom: 0.5rem; /* Reduced bottom margin */
-    /* Ensure icons are centered on mobile */
-    display: flex;
-    justify-content: center;
     gap: 1.5rem;
 }
 
-.footer-social a {
-    font-size: 1.8rem; /* Slightly larger for impact */
-    margin: 0; /* Removed margin to use gap */
-    color: var(--color-primary);
+/* New Contact Bar Styling */
+.footer-contact-bar {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 0.5rem 1rem; /* Vertical and horizontal gap */
+    font-weight: 700;
 }
 
-.footer-social a:hover {
-    color: var(--color-accent);
+.footer-contact-bar a {
+    color: var(--color-primary); /* Keep links black for professionalism */
 }
 
-.footer-bottom {
-    border-top: 1px solid #e0e0e0;
-    padding-top: 1rem;
+.footer-contact-bar a:hover {
+    color: var(--color-accent); /* Highlight on hover */
+}
+
+/* New Bottom Bar Styling */
+.footer-bottom-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding-top: 0.5rem;
     width: 100%;
+}
+
+.footer-bottom-bar p {
+    margin: 0;
 }
 
 .footer-nav a {
     margin: 0 0.5rem;
+}
+
+
+/* Desktop Footer Layout */
+@media (min-width: 768px) {
+    .footer-contact-bar {
+        flex-wrap: nowrap; /* Forces content onto one line on desktop */
+        justify-content: space-around; /* Spreads out contact details */
+    }
+
+    .footer-bottom-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
 }
 
 /* --- MEDIA QUERIES (Desktop Footer Overrides) --- */
