@@ -290,12 +290,12 @@ h2 {
 }
 
 .footer-contact-bar a {
-    color: var(--color-primary); /* Links are black (prominent and readable) */
+    color: var(--color-accent); /* Links are now the lovely blue/turquoise */
     text-decoration: none;
 }
 
 .footer-contact-bar a:hover {
-    color: var(--color-accent);
+    color: var(--color-primary); /* Links turn black on hover (the reverse effect) */
 }
 
 /* 9.2: Bottom Bar (Copyright & Navigation) Styling */
