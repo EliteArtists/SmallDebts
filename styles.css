@@ -319,11 +319,84 @@ h2 {
 
 /* Desktop Layout (768px and up) */
 @media (min-width: 768px) {
+    
+    /* --- General Layout Overrides --- */
+    
+    /* Header & Navigation (Fixes the misplaced nav) */
+    .menu-toggle {
+        display: none; /* Hide toggle button on desktop */
+    }
+    
+    .main-navigation {
+        display: block; /* Show menu on desktop */
+        position: static;
+        box-shadow: none;
+        border-top: none;
+    }
+
+    .main-navigation ul {
+        display: flex;
+    }
+
+    .main-navigation li a {
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+    }
+
+    /* Hero Section (Fixes the misalignment and image crop) */
+    #hero {
+        flex-direction: row;
+        min-height: 500px;
+        background-color: var(--color-secondary);
+        border-bottom: 1px solid #ddd;
+    }
+
+    .hero-image-wrapper {
+        width: 50%;
+        height: 100%;
+    }
+
+    .hero-img {
+        object-position: center center;
+    }
+
+    .hero-content {
+        width: 50%;
+        text-align: left;
+        padding: 4rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .headline {
+        font-size: 3.5rem;
+    }
+    
+    .subheadline {
+        font-size: 1.25rem;
+        max-width: 450px;
+    }
+
+    .cta-group {
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: flex-start;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+
+    /* --- Footer Styles (The rules you confirmed as perfect) --- */
+
     /* 9.1: Desktop Contact Bar */
     .footer-contact-bar {
         flex-wrap: nowrap; /* Forces contact details onto one line */
         justify-content: space-between; /* Spreads contact details evenly */
-        padding-left: 2rem; /* Add horizontal spacing for alignment */
+        padding-left: 2rem;
         padding-right: 2rem;
     }
     
