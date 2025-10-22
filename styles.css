@@ -475,6 +475,24 @@ h2 {
     resize: vertical;
 }
 
+/* Custom CSS for Onboarding Form Readability */
+.simple-form label {
+    display: block; /* Forces label to take full width and stack elements */
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.simple-form select {
+    width: 100%; /* Makes the select box fill the width like the input boxes */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
 .file-upload {
     margin-bottom: 1rem;
     padding: 1rem;
