@@ -674,6 +674,28 @@ h2 {
     color: var(--color-secondary);
 }
 
+/* --- CSS ADDITIONS FOR pricing.html TIER LISTS --- */
+
+.pricing-card .card-body ul .tier-list-heading {
+    font-weight: 900;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: none;
+    color: var(--color-primary);
+}
+
+.pricing-card .card-body ul .tier-disclaimer {
+    margin-top: 0.75rem;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px dashed #eee;
+}
+
+.pricing-card .card-body ul .tier-disclaimer i {
+    color: #F00; /* Red X for clarity */
+}
+
 /* Add-ons Section */
 .add-ons-section {
     margin-top: 3rem;
