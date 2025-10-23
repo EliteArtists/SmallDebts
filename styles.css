@@ -865,52 +865,52 @@ h2 {
 
 /* --- FINAL LOGO OVERLAP STYLES --- */
 
+/* 1. Establish Positioning Context and Reserve Space */
 .header-content {
-    /* Critical: This establishes the positioning context for the logo */
-    position: relative;
+    position: relative; /* Context for absolute positioning */
 }
 
+/* Compensate for the logo's space so the nav bar doesn't shift left */
+.header-content .logo {
+    min-width: 150px; /* Reserve this space so nav bar doesn't move */
+    height: 30px; /* Reserve vertical space */
+}
+
+/* 2. Style the Logo Image for Overlap */
 .header-logo {
-    /* A. Size Adjustment: Makes the logo double/triple the size */
+    /* A. Size Adjustment (Mobile/Default) */
     width: 150px; 
     height: auto; 
     
-    /* B. Overlap & Positioning: Lifts the logo out of flow */
+    /* B. Overlap & Positioning */
     position: absolute;
-    top: 50%; /* Start positioning halfway down the header container */
-    left: 20px; /* Space from the left edge */
+    top: 50%; 
+    left: 20px; 
+    transform: translateY(-50%); /* Vertically centers the logo */
+    z-index: 101; /* Ensure logo sits on top */
     
-    /* C. Vertical Alignment: Adjusts for the large size */
-    transform: translateY(-50%); /* Centers the large logo vertically */
-    
-    /* D. Layering */
-    z-index: 101; /* Ensure logo sits above the header border and nav */
-    
-    /* Small touch: keeps logo visible on mobile */
-    max-width: 120px;
+    /* Ensure image itself is fully opaque */
+    visibility: visible !important; 
+    max-width: 120px; /* Max size on mobile */
 }
 
-/* Compensate for the overlapping logo's space so the nav bar doesn't shift left */
-.header-content .logo {
-    min-width: 150px; 
-    visibility: hidden; /* Hide the original space it took up */
-}
-
-
-/* DESKTOP ADJUSTMENTS (min-width: 768px) */
+/* 3. DESKTOP ADJUSTMENTS (min-width: 768px) */
 @media (min-width: 768px) {
     .header-logo {
-        /* Make it triple size for desktop visibility */
-        width: 220px; 
+        /* Make it larger for desktop visibility */
+        width: 200px; 
         
-        /* Adjust positioning to allow for more overlap *upwards* */
-        top: 60%; /* Moves the image further down the page to cover more vertical space */
-        left: 20px; 
-        
-        /* Ensure it's not restricted by max-width */
+        /* Adjust overlap position */
+        top: 60%; 
+        left: 30px; 
         max-width: none;
     }
 
+    /* Reserve more space for the logo on desktop */
+    .header-content .logo {
+        min-width: 220px;
+    }
+    
     /* Pull the navigation menu back to the left slightly */
     .main-navigation {
         margin-left: 100px;
