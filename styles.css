@@ -339,7 +339,7 @@ h2 {
     }
 
     .main-navigation li a {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.8rem;
         border-bottom: none;
     }
 
@@ -908,7 +908,7 @@ h2 {
 
     /* Reserve more space for the logo on desktop */
     .header-content .logo {
-        min-width: 220px;
+        min-width: 250px;
     }
     
     /* Pull the navigation menu back to the left slightly */
