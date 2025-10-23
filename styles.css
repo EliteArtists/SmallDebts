@@ -862,3 +862,57 @@ h2 {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* --- FINAL LOGO OVERLAP STYLES --- */
+
+.header-content {
+    /* Critical: This establishes the positioning context for the logo */
+    position: relative;
+}
+
+.header-logo {
+    /* A. Size Adjustment: Makes the logo double/triple the size */
+    width: 150px; 
+    height: auto; 
+    
+    /* B. Overlap & Positioning: Lifts the logo out of flow */
+    position: absolute;
+    top: 50%; /* Start positioning halfway down the header container */
+    left: 20px; /* Space from the left edge */
+    
+    /* C. Vertical Alignment: Adjusts for the large size */
+    transform: translateY(-50%); /* Centers the large logo vertically */
+    
+    /* D. Layering */
+    z-index: 101; /* Ensure logo sits above the header border and nav */
+    
+    /* Small touch: keeps logo visible on mobile */
+    max-width: 120px;
+}
+
+/* Compensate for the overlapping logo's space so the nav bar doesn't shift left */
+.header-content .logo {
+    min-width: 150px; 
+    visibility: hidden; /* Hide the original space it took up */
+}
+
+
+/* DESKTOP ADJUSTMENTS (min-width: 768px) */
+@media (min-width: 768px) {
+    .header-logo {
+        /* Make it triple size for desktop visibility */
+        width: 220px; 
+        
+        /* Adjust positioning to allow for more overlap *upwards* */
+        top: 60%; /* Moves the image further down the page to cover more vertical space */
+        left: 20px; 
+        
+        /* Ensure it's not restricted by max-width */
+        max-width: none;
+    }
+
+    /* Pull the navigation menu back to the left slightly */
+    .main-navigation {
+        margin-left: 100px;
+    }
+}
