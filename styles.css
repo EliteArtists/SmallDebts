@@ -1,8 +1,8 @@
 /* --- 1. RESETS & BASE STYLES --- */
 :root {
-    --color-primary: #000000;
-    --color-secondary: #ffffff;
-    --color-accent: #00A7B5;
+    --color-primary: #000000; /* Black */
+    --color-secondary: #ffffff; /* White */
+    --color-accent: #00A7B5; /* Deep Cyan */
     --font-family-body: 'Inter', sans-serif;
     --max-width: 1200px;
     --spacing-unit: 1.5rem;
@@ -40,7 +40,7 @@ a:hover {
 }
 
 section {
-    padding: 5rem 0;
+    padding: 5rem 0; /* Consistent vertical spacing for sections */
 }
 
 .section-padded {
@@ -71,39 +71,27 @@ h2 {
 
 /* --- 3. HEADER & NAVIGATION --- */
 .site-header {
-    background-color: var(--color-secondary);
-    border-bottom: 1px solid #eee;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999; /* Make sure it sits on top */
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; 
 }
 
-/* Mobile Image Sizing and Overlap */
-.header-logo {
-    width: 180px; 
-    height: auto; 
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    z-index: 101; 
-    max-width: 120px; /* Capped for mobile view */
+.logo img {
+    height: 130px; /* Adjust size of logo image */
+    width: auto;
 }
-
-/* Base Logo/Link Container (mobile) */
-.header-content .logo {
-    min-width: 150px; /* Reserves space on mobile */
-    height: 30px; 
-}
-
 
 /* Mobile Menu Toggle */
 .menu-toggle {
@@ -111,12 +99,12 @@ h2 {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    display: block; 
+    display: block; /* Show on mobile */
     color: var(--color-primary);
 }
 
 .main-navigation {
-    display: none; 
+    display: none; /* Hidden by default for mobile */
     position: absolute;
     top: 100%;
     left: 0;
@@ -136,7 +124,7 @@ h2 {
 
 .main-navigation li a {
     display: block;
-    padding: 1rem;
+    padding: 0.5rem 0.5rem;
     text-align: center;
     border-bottom: 1px solid #f5f5f5;
     color: var(--color-primary);
@@ -185,13 +173,14 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 0;
-    background-color: #f7f7f7; 
+    background-color: #f7f7f7; /* Light background for the image section */
 }
 
 .hero-image-wrapper {
+    /* Use the existing stock photo (hero.jpg) */
     position: relative;
     width: 100%;
-    height: 300px; 
+    height: 300px; /* Initial height for mobile */
     overflow: hidden;
 }
 
@@ -199,7 +188,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center; 
+    object-position: top center; /* Focus on the face/hands */
 }
 
 .hero-content {
@@ -274,7 +263,7 @@ h2 {
 .video-wrapper {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #f7f7f7; 
+    background-color: #f7f7f7; /* Light grey background for the box */
 }
 
 /* --- 9. FOOTER --- */
@@ -295,21 +284,21 @@ h2 {
 /* 9.1: Top Contact Bar Styling */
 .footer-contact-bar {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
     justify-content: center;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #e0e0e0;
-    gap: 0.5rem 1rem; 
+    gap: 0.5rem 1rem; /* Vertical and horizontal gap between items */
     font-weight: 700;
 }
 
 .footer-contact-bar a {
-    color: var(--color-accent); 
+    color: var(--color-accent); /* Links are now the lovely blue/turquoise */
     text-decoration: none;
 }
 
 .footer-contact-bar a:hover {
-    color: var(--color-primary); 
+    color: var(--color-primary); /* Links turn black on hover (the reverse effect) */
 }
 
 /* 9.2: Bottom Bar (Copyright & Navigation) Styling */
@@ -331,7 +320,100 @@ h2 {
 }
 
 
-/* --- CSS ADDITIONS FOR tell-us-about-it.html (Dispute Service) --- */
+/* Desktop Layout (768px and up) */
+@media (min-width: 768px) {
+    
+    /* --- General Layout Overrides --- */
+    
+    /* Header & Navigation (Fixes the misplaced nav) */
+    .menu-toggle {
+        display: none; /* Hide toggle button on desktop */
+    }
+    
+    .main-navigation {
+        display: block; /* Show menu on desktop */
+        position: static;
+        box-shadow: none;
+        border-top: none;
+    }
+
+    .main-navigation ul {
+        display: flex;
+    }
+
+    .main-navigation li a {
+        padding: 0.5rem 0.8rem;
+        border-bottom: none;
+    }
+
+    /* Hero Section (Fixes the misalignment and image crop) */
+    #hero {
+        flex-direction: row;
+        min-height: 500px;
+        background-color: var(--color-secondary);
+        border-bottom: 1px solid #ddd;
+    }
+
+    .hero-image-wrapper {
+        width: 50%;
+        height: 100%;
+    }
+
+    .hero-img {
+        object-position: center center;
+    }
+
+    .hero-content {
+        width: 50%;
+        text-align: left;
+        padding: 4rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .headline {
+        font-size: 3.5rem;
+    }
+    
+    .subheadline {
+        font-size: 1.25rem;
+        max-width: 450px;
+    }
+
+    .cta-group {
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: flex-start;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+
+    /* --- Footer Styles (The rules you confirmed as perfect) --- */
+
+    /* 9.1: Desktop Contact Bar */
+    .footer-contact-bar {
+        flex-wrap: nowrap; /* Forces contact details onto one line */
+        justify-content: space-between; /* Spreads contact details evenly */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    /* 9.2: Desktop Bottom Bar */
+    .footer-bottom-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+/* --- CSS ADDITIONS FOR tell-us-about-it.html --- */
+
 .page-title {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
@@ -398,13 +480,13 @@ h2 {
 
 /* Custom CSS for Onboarding Form Readability */
 .simple-form label {
-    display: block; 
+    display: block; /* Forces label to take full width and stack elements */
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
 .simple-form select {
-    width: 100%; 
+    width: 100%; /* Makes the select box fill the width like the input boxes */
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
@@ -511,7 +593,7 @@ h2 {
 }
 
 .workflow-steps .step {
-    flex: 1 1 180px; 
+    flex: 1 1 180px; /* Allows up to 5 steps on large screen, wraps on small */
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -546,7 +628,7 @@ h2 {
 .pricing-card-grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Stacked on mobile */
     margin-bottom: 3rem;
 }
 
@@ -585,7 +667,7 @@ h2 {
 
 .pricing-card .card-body {
     padding: 1.5rem;
-    flex-grow: 1; 
+    flex-grow: 1; /* Ensures equal card height */
     text-align: left;
 }
 
@@ -644,7 +726,7 @@ h2 {
 }
 
 .pricing-card .card-body ul .tier-disclaimer i {
-    color: #F00; 
+    color: #F00; /* Red X for clarity */
 }
 
 /* Add-ons Section */
@@ -691,7 +773,7 @@ h2 {
 .contact-grid {
     display: grid;
     gap: 3rem;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Single column on mobile */
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
@@ -729,14 +811,14 @@ h2 {
 .contact-details i {
     color: var(--color-accent);
     margin-right: 0.5rem;
-    width: 1.5rem; 
+    width: 1.5rem; /* for alignment */
     text-align: center;
 }
 
 /* Desktop Contact Layout */
 @media (min-width: 768px) {
     .contact-grid {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr; /* Two columns on desktop */
     }
 }
 
@@ -745,7 +827,7 @@ h2 {
 .review-grid {
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Stacked on mobile */
     margin-bottom: 2rem;
 }
 
@@ -758,7 +840,7 @@ h2 {
 }
 
 .review-card .stars {
-    color: #FFD700; 
+    color: #FFD700; /* Gold color for stars */
     margin-bottom: 1rem;
     font-size: 1.25rem;
 }
@@ -787,39 +869,63 @@ h2 {
 /* --- FINAL LOGO OVERLAP STYLES --- */
 
 /* 1. Establish Positioning Context and Reserve Space */
+/* 1. Logo Positioning Context */
 .header-content {
-    position: relative; 
+    position: relative;
 }
 
-/* Compensate for the logo's space so the nav bar doesn't shift left */
 .header-content .logo {
-    min-width: 150px; 
-    height: 30px; 
+    min-width: 180px; /* Reserve space so nav doesn't shift */
+    height: 30px;
 }
 
-/* 2. Style the Logo Image for Overlap */
+/* 2. Default (Mobile) Logo */
 .header-logo {
-    /* A. Size Adjustment (Mobile/Default) */
-    width: 180px; 
-    height: auto; 
+    width: 180px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 101;
+    visibility: visible !important;
+    max-width: 180px;
+}
+
+/* 3. Desktop Adjustments */
+@media (min-width: 768px) {
+  .header-logo {
+    width: 260px;
+    left: 25px;
+  }
+}
+
+    .header-content .logo {
+        min-width: 260px;
+    }
+
+    .main-navigation {
+        margin-left: 100px;
+    }
+}
     
     /* B. Overlap & Positioning */
     position: absolute;
     top: 50%; 
     left: 20px; 
-    transform: translateY(-50%); 
-    z-index: 101; 
+    transform: translateY(-50%); /* Vertically centers the logo */
+    z-index: 101; /* Ensure logo sits on top */
     
     /* Ensure image itself is fully opaque */
     visibility: visible !important; 
-    max-width: 120px; /* Mobile size cap */
+    max-width: 180px; /* Max size on mobile */
 }
 
 /* 3. DESKTOP ADJUSTMENTS (min-width: 768px) */
 @media (min-width: 768px) {
     .header-logo {
         /* Make it larger for desktop visibility */
-        width: 280px; 
+        width: 250px; 
         
         /* Adjust overlap position */
         top: 60%; 
@@ -829,12 +935,11 @@ h2 {
 
     /* Reserve more space for the logo on desktop */
     .header-content .logo {
-        min-width: 280px;
+        min-width: 250px;
     }
     
-    /* Fix Two-Line Menu: Reduced Padding */
-    .main-navigation li a {
-        padding: 0.5rem 0.5rem; /* Tighter padding for links */
-        border-bottom: none;
+    /* Pull the navigation menu back to the left slightly */
+    .main-navigation {
+        margin-left: 100px;
     }
 }
