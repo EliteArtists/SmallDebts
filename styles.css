@@ -80,7 +80,7 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1rem 1.5rem 1rem 1rem; /* restore clean padding */
-  margin-left: -1rem; /* shift the entire header to the left */
+  margin-left: -1.5rem; /* shift the entire header to the left */
   background-color: white;
   position: sticky;
   top: 0;
