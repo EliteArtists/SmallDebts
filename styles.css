@@ -79,8 +79,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 1.5rem 1rem 1rem; /* restore clean padding */
-  margin-left: -9.5rem; /* shift the entire header to the left */
+  padding: 1rem 1.5rem 1rem 0.1rem; /* restore clean padding */
   background-color: white;
   position: sticky;
   top: 0;
