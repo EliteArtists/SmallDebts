@@ -71,12 +71,12 @@ h2 {
 
 /* --- 3. HEADER & NAVIGATION --- */
 .site-header {
-    background-color: var(--color-secondary);
-    border-bottom: 1px solid #eee;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows mobile stacking */
+  padding: 1rem 2rem;
+  background-color: white;
 }
 
 .header-content {
@@ -121,7 +121,7 @@ h2 {
 
 .main-navigation li a {
     display: block;
-    padding: 1rem;
+    padding: 0.5rem 0.5rem;
     text-align: center;
     border-bottom: 1px solid #f5f5f5;
     color: var(--color-primary);
@@ -876,11 +876,15 @@ h2 {
     height: 30px; /* Reserve vertical space */
 }
 
-/* 2. Style the Logo Image for Overlap */
 .header-logo {
-    /* A. Size Adjustment (Mobile/Default) */
-    width: 180px; 
-    height: auto; 
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  top: 20px;
+  z-index: 2;
+}
     
     /* B. Overlap & Positioning */
     position: absolute;
