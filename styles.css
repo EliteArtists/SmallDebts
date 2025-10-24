@@ -338,13 +338,18 @@ h2 {
     }
 
     .main-navigation ul {
-        display: flex;
-    }
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-    .main-navigation li a {
-        padding: 0.5rem 0.8rem;
-        border-bottom: none;
-    }
+.main-navigation li a {
+  display: inline-block;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-bottom: none;
+  white-space: nowrap;
+}
 
     /* Hero Section (Fixes the misalignment and image crop) */
     #hero {
