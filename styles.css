@@ -75,15 +75,34 @@ h2 {
 
 /* --- 3. HEADER & NAVIGATION --- */
 .site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 1rem 1.5rem 1rem 0.1rem; /* restore clean padding */
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 999; /* Make sure it sits on top */
+    /* Larger Padding to fit the tall, large logo */
+    padding: 2.5rem 0; /* INCREASED VERTICAL PADDING */
+    background-color: var(--color-secondary);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* Enable smooth transition for height/size changes */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Base Logo/Link Container */
+.header-content .logo {
+    min-width: 300px; /* Reserves space for large logo */
+    height: 60px; /* Reserves vertical space */
+}
+
+/* --- NEW: SCROLL CLASS FOR SHRINKING EFFECT --- */
+.site-header.scrolled {
+    padding: 0.5rem 0; /* Shrinks vertical padding */
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.site-header.scrolled .header-logo {
+    width: 150px; /* Shrinks logo width */
+    left: 10px; /* Moves logo slightly left */
+    transform: translateY(-50%) scale(0.8); /* Shrinks it down further */
 }
 
 .header-content {
