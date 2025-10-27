@@ -67,26 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Dynamic Header Shrink Logic ---
 
 const header = document.querySelector('.site-header');
-const scrollOffset = 100; // Point in pixels where the shrink effect begins
+// Set the scroll point (e.g., 100 pixels down) where the shrink effect begins
+const scrollOffset = 100; 
 
 function handleScroll() {
     if (window.scrollY >= scrollOffset) {
-        // User has scrolled past the threshold
+        // User has scrolled past the threshold: apply the scrolled classes
         if (!header.classList.contains('scrolled')) {
             header.classList.add('scrolled');
         }
     } else {
-        // User is back at the top
+        // User is back at the top: remove the scrolled classes
         if (header.classList.contains('scrolled')) {
             header.classList.remove('scrolled');
         }
     }
 }
 
-// Add the scroll event listener globally
+// Add the event listener to trigger the function when the user scrolls
 window.addEventListener('scroll', handleScroll);
 
-// Also run once on page load to handle initial position if starting mid-page
+// Also run once on page load to handle initial position 
 document.addEventListener('DOMContentLoaded', handleScroll);
-
-// Note: Ensure this runs AFTER your other DOMContentLoaded listeners.
