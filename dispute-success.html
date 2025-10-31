@@ -5,30 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Required — Small Debts</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script 
+      src="https://www.paypal.com/sdk/js?client-id=BAAgcQ9BGtD4aHzKLY430eISgn4JS2DKAqUgjldRfA6_Y5OzqC1R8rFJHqOlB4g2utxtVmEZuwNqQzIL9k&components=hosted-buttons&disable-funding=venmo&currency=GBP">
+    </script>
+    
 </head>
 <body>
 <main>
     <section id="payment-confirmation" class="section-padded container text-center">
         <i class="fas fa-check-circle fa-4x" style="color: var(--color-accent); margin-bottom: 1rem;"></i>
-        <h1 class="page-title">Thank You! We have received your details.</h1>
+        <h1 class="page-title">Thank You! Your Complaint is Submitted.</h1>
         
         <p class="lead-text" style="max-width: 700px; margin: 0 auto 2rem;">
-            To begin a payment of £12.50 is required.
+            We have received your dispute details. To begin the drafting and sending process for your formal complaint email, a payment of **£12.50** is required.
         </p>
 
-        <a href="https://buy.stripe.com/28EfZj6RD4fz8axePX6Na06" target="_blank" class="cta-button primary" style="font-size: 1.5rem; padding: 1rem 3rem;">
-            Pay Now - £12.50
-        </a>
-
-        <div class="payment-options" style="margin-top: 2rem;">
-            <p style="font-size: 1.1rem; font-weight: 700;">We accept all major methods:</p>
-            <i class="fab fa-cc-visa fa-2x" style="margin: 0 0.5rem;"></i>
-            <i class="fab fa-cc-mastercard fa-2x" style="margin: 0 0.5rem;"></i>
-            <i class="fab fa-apple-pay fa-2x" style="margin: 0 0.5rem;"></i>
-            <i class="fab fa-google-pay fa-2x" style="margin: 0 0.5rem;"></i>
-            <i class="fab fa-paypal fa-2x" style="margin: 0 0.5rem;"></i>
-        </div>
+        <div id="paypal-container-JEHCABPF77K8A" style="margin: 2rem auto; max-width: 300px;"></div>
         
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "JEHCABPF77K8A",
+          }).render("#paypal-container-JEHCABPF77K8A")
+        </script>
         <p style="margin-top: 3rem; color: #666;">
             We will begin as soon as payment is confirmed. For questions, please <a href="contact.html">Contact Us</a>.
         </p>
