@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Use this simple form to submit details about your complaint or debt recovery case for the £12.50 email service.">
+    <meta name="description" content="Dedicated form for tenants to submit complaints against estate agents or landlords for the £12.50 service.">
     
-    <title>Tell Us About It — Small Debts</title>
+    <title>Tenant Complaint Form — Small Debts</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,19 +39,22 @@
 </header>
 
 <main>
-    <section id="tell-us-form" class="section-padded container">
+    <section id="tenant-complaint-form-section" class="section-padded container">
         <h1 class="page-title text-center">Tenant Advocate Service</h1>
         
         <div class="intro-text text-center">
-    <p class="lead-text">
-    Use the form below to provide the necessary details for our £12.50 Tenant Advocate Service. We will review your case and draft a formal, professionally worded email to the Estate Agent or Landlord on your behalf.
-</p>
-    <p style="font-style: italic; margin-top: 1rem; color: var(--color-primary);">
-        *Ideal for tenants seeking fair treatment, help with retrieving a deposit.*
-    </p>
-</div>
+            <p class="lead-text">
+                Use the form below to provide the necessary details for our £12.50 Tenant Advocate Service. We will review your case and draft a formal, professionally worded email to the Estate Agent or Landlord on your behalf.
+            </p>
+            <p style="font-style: italic; margin-top: 1rem; color: var(--color-primary);">
+                *Ideal for tenants seeking fair treatment, help with retrieving a deposit.*
+            </p>
+        </div>
 
-        <form id="complaint-form" action="#" method="POST" class="simple-form">
+        <form name="TenantComplaintForm" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="/dispute-success.html" class="simple-form">
+            
+            <input type="hidden" name="form-name" value="TenantComplaintForm" />
+            <input type="hidden" name="bot-field" />
             
             <fieldset class="user-details">
                 <legend>Your Details</legend>
@@ -63,22 +66,30 @@
             <fieldset class="issue-details">
                 <legend>Issue Details</legend>
                 <textarea name="Brief Description of Issue" rows="5" placeholder="Brief details on the nature of the complaint" required></textarea>
-                <input type="text" name="Total Debt To Be Recovered" placeholder="Total Amount Involved">
+                <input type="text" name="Total Amount To Be Recovered" placeholder="Total Amount Involved">
                 <textarea name="Timeline of Events" rows="5" placeholder="Timeline of Events" required></textarea>
                 
                 <div class="file-upload">
-                    <label for="attachments">Attach Invoices or proof:</label>
-                    <input type="file" id="attachments" name="Attachments" multiple>
-                    <small>Note: File uploads often require a third-party form service account. Please limit file size.</small>
+                    <label for="file1">Attach File 1 (e.g., Tenancy Agreement):</label>
+                    <input type="file" id="file1" name="attachment_1" /> 
                 </div>
-            </fieldset>
+                <div class="file-upload">
+                    <label for="file2">Attach File 2 (e.g., Deposit Scheme Proof):</label>
+                    <input type="file" id="file2" name="attachment_2" /> 
+                </div>
+                <div class="file-upload">
+                    <label for="file3">Attach File 3 (e.g., Correspondence):</label>
+                    <input type="file" id="file3" name="attachment_3" /> 
+                    <small>Note: Please limit file size.</small>
+                </div>
+                </fieldset>
             
             <fieldset class="debtor-details">
                 <legend>Company Details</legend>
                 <input type="text" name="Company or Business Name" placeholder="Company or Business Name*" required>
-                <input type="text" name="Company Address" placeholder="Company Address">
-                <input type="url" name="Company Website" placeholder="Company Website (Optional)">
-                <input type="text" name="Debtor Contact Name" placeholder="Contact Name">
+                <input type="text" name="Company Address" placeholder="Company Address (Optional)">
+                <input type="text" name="Company Website" placeholder="Company Website (Optional)">
+                <input type="text" name="Contact Name" placeholder="Contact Name (Optional)">
                 <input type="tel" name="Debtor Contact Telephone Number" placeholder="Contact Telephone Number (Optional)">
                 <input type="email" name="Debtor Contact Email Address" placeholder="Contact Email Address (Optional)">
             </fieldset>
@@ -89,8 +100,8 @@
         </form>
         
         <p class="disclosure-text text-center">
-    Disclosure: Each message/email costs £12.50 — we’ll confirm all details and fees before sending anything on your behalf.
-</p>
+            Disclosure: Each message/email costs £12.50 — we’ll confirm all details and fees before sending anything on your behalf.
+        </p>
     </section>
 </main>
 
