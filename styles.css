@@ -141,8 +141,14 @@ h2 {
     display: block;
 }
 
-.main-navigation ul {
+/* FIX: Target ONLY the direct child UL to prevent dropdowns from inheriting styles */
+.main-navigation > ul {
     list-style: none;
+}
+
+/* FIX: Ensure main LI items have no list style */
+.main-navigation > ul > li {
+    list-style-type: none;
 }
 
 .main-navigation li a {
@@ -155,7 +161,7 @@ h2 {
 }
 
 /* ------------------------------------------- */
-/* NEW DROPDOWN STYLES (Mobile/Default) 
+/* DROPDOWN STYLES (Mobile/Default) 
 /* ------------------------------------------- */
 
 /* Hide the dropdown menu (nested ul) by default */
@@ -164,6 +170,7 @@ h2 {
     background-color: #f7f7f7; /* Slightly different background for sub-items */
     padding: 0;
     margin: 0;
+    list-style: none; /* Ensure nested lists don't show bullets */
 }
 
 /* Style the links inside the dropdown menu */
@@ -403,22 +410,23 @@ h2 {
         border-top: none;
     }
 
-    .main-navigation ul {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+    /* FIX: Ensure ONLY the top-level UL is a flex container */
+    .main-navigation > ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.main-navigation li a {
-  display: inline-block;
-  text-align: left;
-  padding: 0.5rem 1rem;
-  border-bottom: none;
-  white-space: nowrap;
-}
+    .main-navigation li a {
+        display: inline-block;
+        text-align: left;
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+        white-space: nowrap;
+    }
 
 /* ------------------------------------------- */
-/* NEW DROPDOWN STYLES (Desktop) 
+/* DROPDOWN STYLES (Desktop) 
 /* ------------------------------------------- */
 
 /* Set up the dropdown parent (li.has-dropdown) for relative positioning */
@@ -459,7 +467,7 @@ h2 {
     color: var(--color-primary);
 }
 
-/* Hide caret on desktop, as hover is implicit */
+/* Show caret on desktop for visual cue */
 .main-navigation .dropdown-trigger i.fa-caret-down {
     display: inline-block;
 }
