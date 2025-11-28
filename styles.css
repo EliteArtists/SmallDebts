@@ -88,7 +88,8 @@ h2 {
 
 /* Base Logo/Link Container */
 .header-content .logo {
-    min-width: 300px; /* Reserves space for large logo */
+    /* FIXED: Changed from 300px to auto so it doesn't push the menu button off screen on mobile */
+    min-width: auto; 
     height: 60px; /* Reserves vertical space */
 }
 
@@ -124,6 +125,7 @@ h2 {
     cursor: pointer;
     display: block; /* Show on mobile */
     color: var(--color-primary);
+    z-index: 102; /* Ensure it sits above other elements */
 }
 
 .main-navigation {
@@ -894,102 +896,35 @@ h2 {
     }
 }
 
-/* --- FINAL LOGO OVERLAP STYLES --- */
+/* --- FINAL LOGO STYLES (Cleaned Up) --- */
 
-/* 1. Establish Positioning Context and Reserve Space */
-/* 1. Logo Positioning Context */
-.header-content {
-    position: relative;
-}
-
-.header-content .logo {
-    min-width: 180px; /* Reserve space so nav doesn't shift */
-    height: 30px;
-}
-
-/* 2. Default (Mobile) Logo */
+/* 1. Mobile Default: Hide the logo image */
 .header-logo {
-    width: 180px;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    z-index: 101;
-    visibility: visible !important;
-    max-width: 180px;
+    display: none; 
 }
 
-/* 3. Desktop Adjustments */
+/* 2. Desktop Adjustments (min-width: 768px) */
 @media (min-width: 768px) {
-  .header-logo {
-    width: 260px;
-    left: 25px;
-  }
-}
+    
+    /* Bring the logo back on desktop */
+    .header-logo {
+        display: block;
+        width: 250px;
+        height: auto;
+        position: absolute;
+        top: 60%;
+        left: 30px;
+        transform: translateY(-50%);
+        z-index: 101;
+    }
 
+    /* Restore container spacing */
     .header-content .logo {
         min-width: 260px;
     }
-
+    
+    /* Adjust nav */
     .main-navigation {
         margin-left: 100px;
     }
-}
-    
-    /* B. Overlap & Positioning */
-    position: absolute;
-    top: 50%; 
-    left: 20px; 
-    transform: translateY(-50%); /* Vertically centers the logo */
-    z-index: 101; /* Ensure logo sits on top */
-    
-    /* Ensure image itself is fully opaque */
-    visibility: visible !important; 
-    max-width: 180px; /* Max size on mobile */
-}
-
-/* 3. DESKTOP ADJUSTMENTS (min-width: 768px) */
-@media (min-width: 768px) {
-    .header-logo {
-        /* Make it larger for desktop visibility */
-        width: 250px; 
-        
-        /* Adjust overlap position */
-        top: 60%; 
-        left: 30px; 
-        max-width: none;
-    }
-
-    /* Reserve more space for the logo on desktop */
-    .header-content .logo {
-        min-width: 250px;
-    }
-    
-    /* Pull the navigation menu back to the left slightly */
-    .main-navigation {
-        margin-left: 100px;
-    }
-}
-
-/* --- DYNAMIC HEADER SCROLL EFFECT --- */
-
-/* 1. Base Header Transition setup */
-.site-header {
-    /* Ensures smooth resizing/color change */
-    transition: all 0.3s ease-in-out; 
-}
-
-/* 2. Style when scrolled (Shrinking Header and Transparency) */
-.site-header.scrolled {
-    padding: 0.5rem 0; /* Shrinks vertical padding */
-    /* Semi-transparent white background */
-    background-color: rgba(255, 255, 255, 0.95); 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* 3. Style the Logo when Scrolled (Shrinking Logo) */
-.site-header.scrolled .header-logo {
-    width: 150px; /* Shrinks logo to smaller size */
-    transform: translateY(-50%) scale(0.6); /* Shrinks it further and centers it */
 }
