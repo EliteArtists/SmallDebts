@@ -123,7 +123,19 @@ h2 {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    display: block; /* Show on mobile */
+    
+    /* FIXED: Flex display to center the icon */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+    /* FIXED: Force to right side even if logo is hidden */
+    margin-left: auto; 
+    
+    /* FIXED: Ensure button has size */
+    width: 44px;
+    height: 44px;
+    
     color: var(--color-primary);
     z-index: 102; /* Ensure it sits above other elements */
 }
@@ -849,50 +861,6 @@ h2 {
 @media (min-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr 1fr; /* Two columns on desktop */
-    }
-}
-
-/* --- CSS ADDITIONS FOR reviews.html --- */
-
-.review-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr; /* Stacked on mobile */
-    margin-bottom: 2rem;
-}
-
-.review-card {
-    background-color: var(--color-secondary);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.review-card .stars {
-    color: #FFD700; /* Gold color for stars */
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-}
-
-.review-text {
-    font-size: 1.15rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-.review-meta {
-    font-size: 0.9rem;
-    color: #666;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* Desktop Review Layout */
-@media (min-width: 768px) {
-    .review-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
