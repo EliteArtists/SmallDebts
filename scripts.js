@@ -7,14 +7,38 @@ document.addEventListener('DOMContentLoaded', () => {
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
             menuToggle.setAttribute('aria-expanded', !isExpanded);
             mainNav.classList.toggle('is-open');
+            
+            // Optional: Close dropdowns when main menu is closed
+            if (!mainNav.classList.contains('is-open')) {
+                mainNav.querySelectorAll('.has-dropdown.is-open').forEach(el => {
+                    el.classList.remove('is-open');
+                });
+            }
         });
         
-        // Close menu when a link is clicked (mobile experience)
-        mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+        // Mobile Dropdown Toggle Logic
+        // We select the actual link that says "Dispute Service" or "Contact"
+        mainNav.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', (event) => {
+                // Check if we are on mobile (screen width < 768px)
                 if (window.innerWidth < 768) {
-                    mainNav.classList.remove('is-open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
+                    const parentLi = trigger.closest('.has-dropdown');
+                    
+                    // If the menu is NOT open, prevent the link from going to the page
+                    // and instead open the dropdown.
+                    if (!parentLi.classList.contains('is-open')) {
+                        event.preventDefault();
+                        parentLi.classList.add('is-open');
+                    } 
+                    // If it IS open, the second click will naturally go to the link href
+                    // OR you can force it to close by adding an else { parentLi.classList.remove('is-open'); event.preventDefault(); }
+                    // But usually, clicking again to navigate is standard behavior.
+                    
+                    // Let's implement toggle behavior (Open/Close) and rely on the sub-link for navigation
+                    else {
+                        event.preventDefault();
+                        parentLi.classList.remove('is-open');
+                    }
                 }
             });
         });
@@ -24,9 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Dynamic Form Logic for Onboarding Page ---
 
 function toggleTierVisibility() {
+    // Check if elements exist before accessing them to avoid errors on other pages
     const serviceSelect = document.getElementById('service-interest');
     const tierGroup = document.getElementById('tier-selection-group');
     const tierSelect = document.getElementById('tier-interest');
+
+    if(!serviceSelect || !tierGroup || !tierSelect) return;
 
     // Get the selected value
     const selectedService = serviceSelect.value;
@@ -55,11 +82,7 @@ function toggleTierVisibility() {
 
 // Ensure the function runs once the page loads to check for initial state
 document.addEventListener('DOMContentLoaded', () => {
-    // Existing menu toggle logic remains here...
-    
-    // Check if the service interest element exists (i.e., we are on the onboarding page)
     if (document.getElementById('service-interest')) {
-        // Run toggle on load to handle back-button states or refresh
         toggleTierVisibility(); 
     }
 });
@@ -67,25 +90,21 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Dynamic Header Shrink Logic ---
 
 const header = document.querySelector('.site-header');
-// Set the scroll point (e.g., 100 pixels down) where the shrink effect begins
 const scrollOffset = 100; 
 
 function handleScroll() {
+    if(!header) return;
+    
     if (window.scrollY >= scrollOffset) {
-        // User has scrolled past the threshold: apply the scrolled classes
         if (!header.classList.contains('scrolled')) {
             header.classList.add('scrolled');
         }
     } else {
-        // User is back at the top: remove the scrolled classes
         if (header.classList.contains('scrolled')) {
             header.classList.remove('scrolled');
         }
     }
 }
 
-// Add the event listener to trigger the function when the user scrolls
 window.addEventListener('scroll', handleScroll);
-
-// Also run once on page load to handle initial position 
 document.addEventListener('DOMContentLoaded', handleScroll);
