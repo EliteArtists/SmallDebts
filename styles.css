@@ -75,35 +75,32 @@ h2 {
 
 /* --- 3. HEADER & NAVIGATION --- */
 .site-header {
-    /* Larger Padding to fit the tall, large logo */
-    padding: 2.5rem 0; /* INCREASED VERTICAL PADDING */
+    padding: 2.5rem 0; 
     background-color: var(--color-secondary);
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
     z-index: 100;
-    /* Enable smooth transition for height/size changes */
     transition: all 0.3s ease-in-out;
 }
 
 /* Base Logo/Link Container */
 .header-content .logo {
-    /* FIXED: Changed from 300px to auto so it doesn't push the menu button off screen on mobile */
     min-width: auto; 
-    height: 60px; /* Reserves vertical space */
+    height: 60px; 
 }
 
-/* --- NEW: SCROLL CLASS FOR SHRINKING EFFECT --- */
+/* --- SCROLL CLASS FOR SHRINKING EFFECT --- */
 .site-header.scrolled {
-    padding: 0.5rem 0; /* Shrinks vertical padding */
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    padding: 0.5rem 0; 
+    background-color: rgba(255, 255, 255, 0.95); 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .site-header.scrolled .header-logo {
-    width: 150px; /* Shrinks logo width */
-    left: 10px; /* Moves logo slightly left */
-    transform: translateY(-50%) scale(0.8); /* Shrinks it down further */
+    width: 150px; 
+    left: 10px; 
+    transform: translateY(-50%) scale(0.8); 
 }
 
 .header-content {
@@ -113,7 +110,7 @@ h2 {
 }
 
 .logo img {
-    height: 100px; /* Adjust size of logo image */
+    height: 100px; 
     width: auto;
 }
 
@@ -123,21 +120,14 @@ h2 {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    
-    /* FIXED: Flex display to center the icon */
     display: flex; 
     align-items: center;
     justify-content: center;
-    
-    /* FIXED: Force to right side even if logo is hidden */
     margin-left: auto; 
-    
-    /* FIXED: Ensure button has size */
     width: 44px;
     height: 44px;
-    
     color: var(--color-primary);
-    z-index: 102; /* Ensure it sits above other elements */
+    z-index: 102; 
 }
 
 .main-navigation {
@@ -155,7 +145,8 @@ h2 {
     display: block;
 }
 
-.main-navigation ul {
+/* IMPORTANT FIX: Use > selector to only target the main list, not the nested dropdowns */
+.main-navigation > ul {
     list-style: none;
 }
 
@@ -167,6 +158,36 @@ h2 {
     color: var(--color-primary);
     font-weight: 700;
 }
+
+/* --- MOBILE DROPDOWN STYLES --- */
+.main-navigation .dropdown-menu {
+    display: none; /* Hidden by default on mobile */
+    background-color: #f9f9f9;
+    padding: 0;
+    list-style: none;
+}
+
+.main-navigation .dropdown-menu li a {
+    padding: 0.75rem 1rem;
+    font-weight: 400; /* Lighter weight for sub-items */
+    font-size: 0.95rem;
+    border-bottom: none;
+}
+
+/* Show dropdown when parent is open (Javascript toggles this class) */
+.main-navigation .has-dropdown.is-open > .dropdown-menu {
+    display: block;
+}
+
+/* Caret rotation for mobile */
+.main-navigation .dropdown-trigger i {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+.main-navigation .has-dropdown.is-open .dropdown-trigger i {
+    transform: rotate(180deg);
+}
+
 
 /* --- 4. BUTTONS / CTA --- */
 .cta-button {
@@ -210,14 +231,13 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 0;
-    background-color: #f7f7f7; /* Light background for the image section */
+    background-color: #f7f7f7; 
 }
 
 .hero-image-wrapper {
-    /* Use the existing stock photo (hero.jpg) */
     position: relative;
     width: 100%;
-    height: 300px; /* Initial height for mobile */
+    height: 300px; 
     overflow: hidden;
 }
 
@@ -225,7 +245,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center; /* Focus on the face/hands */
+    object-position: top center; 
 }
 
 .hero-content {
@@ -300,7 +320,7 @@ h2 {
 .video-wrapper {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #f7f7f7; /* Light grey background for the box */
+    background-color: #f7f7f7; 
 }
 
 /* --- 9. FOOTER --- */
@@ -321,21 +341,21 @@ h2 {
 /* 9.1: Top Contact Bar Styling */
 .footer-contact-bar {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    flex-wrap: wrap; 
     justify-content: center;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #e0e0e0;
-    gap: 0.5rem 1rem; /* Vertical and horizontal gap between items */
+    gap: 0.5rem 1rem; 
     font-weight: 700;
 }
 
 .footer-contact-bar a {
-    color: var(--color-accent); /* Links are now the lovely blue/turquoise */
+    color: var(--color-accent); 
     text-decoration: none;
 }
 
 .footer-contact-bar a:hover {
-    color: var(--color-primary); /* Links turn black on hover (the reverse effect) */
+    color: var(--color-primary); 
 }
 
 /* 9.2: Bottom Bar (Copyright & Navigation) Styling */
@@ -360,35 +380,67 @@ h2 {
 /* Desktop Layout (768px and up) */
 @media (min-width: 768px) {
     
-    /* --- General Layout Overrides --- */
-    
-    /* Header & Navigation (Fixes the misplaced nav) */
+    /* Header & Navigation */
     .menu-toggle {
-        display: none; /* Hide toggle button on desktop */
+        display: none; 
     }
     
     .main-navigation {
-        display: block; /* Show menu on desktop */
+        display: block; 
         position: static;
         box-shadow: none;
         border-top: none;
     }
 
-    .main-navigation ul {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+    /* IMPORTANT FIX: Flex ONLY for top-level ul to keep menu horizontal */
+    .main-navigation > ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.main-navigation li a {
-  display: inline-block;
-  text-align: left;
-  padding: 0.5rem 1rem;
-  border-bottom: none;
-  white-space: nowrap;
-}
+    .main-navigation li a {
+        display: inline-block;
+        text-align: left;
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+        white-space: nowrap;
+    }
 
-    /* Hero Section (Fixes the misalignment and image crop) */
+    /* --- DESKTOP DROPDOWN STYLES --- */
+    .main-navigation .has-dropdown {
+        position: relative; /* Anchor for dropdown */
+    }
+
+    .main-navigation .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border: 1px solid #eee;
+        z-index: 200;
+        padding: 0.5rem 0;
+    }
+
+    /* Show on Hover */
+    .main-navigation .has-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .main-navigation .dropdown-menu li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: var(--color-primary);
+    }
+
+    .main-navigation .dropdown-menu li a:hover {
+        background-color: #f7f7f7;
+    }
+
+    /* Hero Section */
     #hero {
         flex-direction: row;
         min-height: 500px;
@@ -435,22 +487,39 @@ h2 {
         text-align: left;
     }
 
-    /* --- Footer Styles (The rules you confirmed as perfect) --- */
-
-    /* 9.1: Desktop Contact Bar */
+    /* Footer Styles */
     .footer-contact-bar {
-        flex-wrap: nowrap; /* Forces contact details onto one line */
-        justify-content: space-between; /* Spreads contact details evenly */
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
         padding-left: 2rem;
         padding-right: 2rem;
     }
     
-    /* 9.2: Desktop Bottom Bar */
     .footer-bottom-bar {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         text-align: left;
+    }
+
+    /* Logo Desktop Styles */
+    .header-logo {
+        display: block;
+        width: 250px;
+        height: auto;
+        position: absolute;
+        top: 60%;
+        left: 30px;
+        transform: translateY(-50%);
+        z-index: 101;
+    }
+
+    .header-content .logo {
+        min-width: 260px;
+    }
+    
+    .main-navigation {
+        margin-left: 100px;
     }
 }
 
