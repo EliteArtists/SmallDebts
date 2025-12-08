@@ -10,13 +10,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../styles.css">
 
+    <link rel="stylesheet" href="../styles.css">
+    
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZP4FBG4C8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9ZP4FBG4C8');
+    </script>
+    
+    <style>
+        .blog-content {
+            max-width: 800px; /* Optimal reading width */
+            margin: 0 auto;
+            text-align: left; 
+        }
+        .blog-content h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            color: var(--color-primary);
+        }
+        .blog-content h3 {
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            color: var(--color-accent);
+        }
+        .blog-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .blog-intro {
+            background-color: #f7f7f7;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,25 +71,25 @@
         <a href="../index.html" class="logo">
             <img src="../logo.png" alt="Small Debts Logo" class="header-logo" />
         </a>
-
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-
-        <nav class="main-navigation">
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-navigation" id="main-nav">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../accounts-department.html">Accounts</a></li>
                 <li><a href="../pricing.html">Pricing</a></li>
-
+                
                 <li class="has-dropdown">
-                    <a href="../dispute-service.html">Dispute Service <i class="fas fa-caret-down"></i></a>
+                    <a href="../dispute-service.html" class="dropdown-trigger">Dispute Service <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="../dispute-service.html">Raise A Dispute</a></li>
                         <li><a href="../tenant-advocate.html">Tenant Advocate</a></li>
                     </ul>
                 </li>
-
+                
                 <li class="has-dropdown">
-                    <a href="../contact.html">Contact <i class="fas fa-caret-down"></i></a>
+                    <a href="../contact.html" class="dropdown-trigger">Contact <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="../reviews.html">Reviews</a></li>
                         <li><a href="../contact.html">Send Message</a></li>
@@ -56,100 +101,102 @@
 </header>
 
 <main>
+    <section class="blog-intro">
+        <div class="container">
+            <h1 class="page-title">Estate Agent Won’t Respond? Here’s What To Do (2025 Guide)</h1>
+            <p class="lead-text" style="max-width: 800px; margin: 0 auto 2rem;">
+                Whether you're a tenant chasing a repair, a buyer needing updates, or a seller waiting on progress — estate agents who ignore you are more than frustrating. Here’s how to force a response legally and effectively.
+            </p>
+            <a href="../dispute-service.html" class="cta-button primary">We Can Contact Them For £12.50</a>
+        </div>
+    </section>
 
-<section class="blog-intro">
-    <div class="container">
-        <h1 class="page-title">Estate Agent Won’t Respond? Here’s What To Do (2025 Guide)</h1>
-        <p class="lead-text" style="max-width:800px;margin:0 auto 2rem;">
-            Whether you're a tenant chasing a repair, a buyer needing updates, or a seller waiting on progress — estate agents who ignore you are more than frustrating. Here’s how to force a response legally and effectively.
-        </p>
-        <a href="../dispute-service.html" class="cta-button primary">We Can Contact Them For £12.50</a>
-    </div>
-</section>
+    <section class="section-padded container blog-content">
 
-<section class="section-padded container blog-content">
-
-    <h2>Why Estate Agents Ignore People</h2>
-    <p>Estate and letting agents deal with large workloads and often prioritise the cases that put financial pressure on them. When they ignore you, it usually falls into one of these categories:</p>
-    <ul>
-        <li>They believe you're not “urgent”</li>
-        <li>Your request costs them time or money</li>
-        <li>They want to delay dealing with a problem</li>
-        <li>Your complaint could result in compensation</li>
-        <li>A staff member simply hasn’t passed the message on</li>
-    </ul>
-
-    <p>While frustrating, the law is on your side — especially if repairs, deposits, or contract obligations are involved.</p>
-
-    <h2>Your Rights (Tenants, Buyers & Sellers)</h2>
-    <p>Under UK law, agents must:</p>
-    <ul>
-        <li>Respond within a reasonable timeframe</li>
-        <li>Pass your message to the landlord/seller</li>
-        <li>Act fairly and communicate updates</li>
-        <li>Not ignore repair or safety issues</li>
-        <li>Follow the terms of their management contract</li>
-    </ul>
-
-    <p>If they don’t, you can escalate.</p>
-
-    <h2>How To Get an Estate Agent to Respond</h2>
-
-    <h3>1. Send a Written Request (Time-Stamped)</h3>
-    <p>Email is best. WhatsApp is acceptable. Avoid phone-only conversations — they leave no evidence.</p>
-
-    <p>Your message should politely request an update and set a <strong>clear timeframe</strong> for response.</p>
-
-    <h3>2. Send a Follow-Up Citing Their Legal Obligations</h3>
-    <p>This is where most people struggle. A structured, legally-backed message forces a reply.</p>
-
-    <p><strong>Small Debts can send this on your behalf for £12.50.</strong></p>
-
-    <h3>3. Contact Their Manager or Branch Director</h3>
-    <p>If the negotiator or property manager is ignoring you, escalate internally.</p>
-
-    <h3>4. Tell Them You Will Escalate to TPO or TDS</h3>
-    <p>Agents dread formal complaints. Mentioning the relevant body often triggers immediate action.</p>
-
-    <h3>5. Submit a Formal Complaint (If Needed)</h3>
-    <p>You can escalate to:</p>
-    <ul>
-        <li><strong>The Property Ombudsman (TPO)</strong></li>
-        <li><strong>Property Redress Scheme (PRS)</strong></li>
-        <li><strong>Tenancy Deposit Scheme (TDS)</strong></li>
-    </ul>
-
-    <p>Agents are required by law to cooperate with these bodies.</p>
-
-    <h2>When You Should Take Action Quickly</h2>
-    <p>You should escalate immediately if:</p>
-    <ul>
-        <li>Repairs are being ignored</li>
-        <li>Your deposit hasn’t been returned</li>
-        <li>You’re being charged unfair fees</li>
-        <li>Your messages are being blocked or dismissed</li>
-        <li>Your purchase/sale is being jeopardised</li>
-    </ul>
-
-    <div style="background:#f0fdf4;padding:2rem;border-radius:8px;border:1px solid #dcfce7;margin-top:3rem;">
-        <h2 style="margin-top:0;color:#166534;">We Can Contact the Agent for You (£12.50)</h2>
-        <p>If you want to force a response without stress, we can send a formal, legally structured communication to the estate agent on your behalf.</p>
-        
+        <h2>Why Estate Agents Ignore People</h2>
+        <p>Estate and letting agents deal with large workloads and often prioritise the cases that put financial pressure on them. When they ignore you, it usually falls into one of these categories:</p>
         <ul>
-            <li>We draft a professional complaint</li>
-            <li>We cite the correct legislation</li>
-            <li>We request action within a fixed timeframe</li>
-            <li>We apply pressure using the right regulatory bodies</li>
+            <li>They believe you're not “urgent”</li>
+            <li>Your request costs them time or money</li>
+            <li>They want to delay dealing with a problem</li>
+            <li>Your complaint could result in compensation</li>
+            <li>A staff member simply hasn’t passed the message on</li>
         </ul>
 
-        <p><strong>A well-written email gets results fast.</strong></p>
+        <p>While frustrating, the law is on your side — especially if repairs, deposits, or contract obligations are involved.</p>
 
-        <div style="text-align:center;margin-top:2rem;">
-            <a href="../dispute-service.html" class="cta-button primary">Start a £12.50 Estate Agent Email</a>
+        <hr style="margin: 3rem 0; border-top: 1px solid #eee;">
+
+        <h2>Your Rights (Tenants, Buyers & Sellers)</h2>
+        <p>Under UK law, agents must:</p>
+        <ul>
+            <li>Respond within a reasonable timeframe</li>
+            <li>Pass your message to the landlord/seller</li>
+            <li>Act fairly and communicate updates</li>
+            <li>Not ignore repair or safety issues</li>
+            <li>Follow the terms of their management contract</li>
+        </ul>
+
+        <p>If they don’t, you can escalate.</p>
+
+        <hr style="margin: 3rem 0; border-top: 1px solid #eee;">
+
+        <h2>How To Get an Estate Agent to Respond</h2>
+
+        <h3>1. Send a Written Request (Time-Stamped)</h3>
+        <p>Email is best. WhatsApp is acceptable. Avoid phone-only conversations — they leave no evidence.</p>
+        <p>Your message should politely request an update and set a <strong>clear timeframe</strong> for response.</p>
+
+        <h3>2. Send a Follow-Up Citing Their Legal Obligations</h3>
+        <p>This is where most people struggle. A structured, legally-backed message forces a reply.</p>
+        <p><strong>Small Debts can send this on your behalf for £12.50.</strong></p>
+
+        <h3>3. Contact Their Manager or Branch Director</h3>
+        <p>If the negotiator or property manager is ignoring you, escalate internally.</p>
+
+        <h3>4. Tell Them You Will Escalate to TPO or TDS</h3>
+        <p>Agents dread formal complaints. Mentioning the relevant body often triggers immediate action.</p>
+
+        <h3>5. Submit a Formal Complaint (If Needed)</h3>
+        <p>You can escalate to:</p>
+        <ul>
+            <li><strong>The Property Ombudsman (TPO)</strong></li>
+            <li><strong>Property Redress Scheme (PRS)</strong></li>
+            <li><strong>Tenancy Deposit Scheme (TDS)</strong></li>
+        </ul>
+        <p>Agents are required by law to cooperate with these bodies.</p>
+
+        <hr style="margin: 3rem 0; border-top: 1px solid #eee;">
+
+        <h2>When You Should Take Action Quickly</h2>
+        <p>You should escalate immediately if:</p>
+        <ul>
+            <li>Repairs are being ignored</li>
+            <li>Your deposit hasn’t been returned</li>
+            <li>You’re being charged unfair fees</li>
+            <li>Your messages are being blocked or dismissed</li>
+            <li>Your purchase/sale is being jeopardised</li>
+        </ul>
+
+        <div style="background: #f0fdf4; padding: 2rem; border-radius: 8px; border: 1px solid #dcfce7; margin-top: 3rem;">
+            <h2 style="margin-top: 0; color: #166534;">We Can Contact the Agent for You (£12.50)</h2>
+            <p>If you want to force a response without stress, we can send a formal, legally structured communication to the estate agent on your behalf.</p>
+            
+            <ul>
+                <li>We draft a professional complaint</li>
+                <li>We cite the correct legislation</li>
+                <li>We request action within a fixed timeframe</li>
+                <li>We apply pressure using the right regulatory bodies</li>
+            </ul>
+
+            <p><strong>A well-written email gets results fast.</strong></p>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="../dispute-service.html" class="cta-button primary">Start a £12.50 Estate Agent Email</a>
+            </div>
         </div>
-    </div>
 
-</section>
+    </section>
 
 </main>
 
@@ -158,11 +205,11 @@
         <div class="footer-contact-bar">
             <span class="contact-item"><strong>Call Us:</strong> <a href="tel:02080580381">0208 058 0381</a></span>
             <span class="contact-item"><strong>Email:</strong> <a href="mailto:support@smalldebts.co.uk">support@smalldebts.co.uk</a></span>
-            <span class="contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/447412302632">07412 302632</a></span>
+            <span class="contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/447412302632" target="_blank" rel="noopener noreferrer">07412 302632</a> | <a href="https://wa.me/447412302632" target="_blank" rel="noopener noreferrer">Chat with Us Now</a></span>
         </div>
 
         <div class="footer-bottom-bar">
-            <p>&copy; 2025 smalldebts.co.uk — All Rights Reserved.</p>
+            <p>&copy; 2025 smalldebts.co.uk - All Rights Reserved.</p>
             <nav class="footer-nav">
                 <a href="../privacy-policy.html">Privacy Policy</a>
                 <a href="../contact.html">Contact Us</a>
@@ -173,5 +220,16 @@
 
 <script src="../scripts.js"></script>
 
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/693087192be5af1980eb90ba/1jbiovens';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
 </body>
 </html>
