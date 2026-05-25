@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View all Small Debts pricing tiers for complaint emails, credit control, and outsourced accounts department services.">
+    <meta name="description" content="Clear, fixed pricing for dispute resolution and small claims support. No hourly rates. No surprises.">
     
     <title>Pricing & Services — Small Debts</title>
 
@@ -29,6 +29,19 @@
 
   gtag('config', 'G-9ZP4FBG4C8');
 </script>
+
+<style>
+    /* Specific overrides for the 2-column pricing layout */
+    @media (min-width: 768px) {
+        .pricing-card-grid {
+            grid-template-columns: 1fr 1fr; /* 2 columns instead of 3 */
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+</style>
+
 </head>
 <body>
 
@@ -40,27 +53,14 @@
         <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </button>
+        
         <nav class="main-navigation" id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="accounts-department.html">Accounts</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                
-                <li class="has-dropdown">
-                    <a href="dispute-service.html" class="dropdown-trigger">Dispute Service <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="dispute-service.html">Raise A Dispute</a></li>
-                        <li><a href="tenant-advocate.html">Tenant Advocate</a></li>
-                    </ul>
-                </li>
-                
-                <li class="has-dropdown">
-                    <a href="contact.html" class="dropdown-trigger">Contact <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="contact.html">Send Message</a></li>
-                    </ul>
-                </li>
+                <li><a href="dispute-service.html">Raise A Dispute</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -68,87 +68,82 @@
 
 <main>
     <section id="pricing-summary" class="section-padded container text-center">
-        <h1 class="page-title">Pricing & Services</h1>
+        <h1 class="page-title">CLEAR, FIXED PRICING</h1>
         <p class="lead-text" style="max-width: 600px; margin: 0 auto 3rem;">
-            Clear, transparent pricing for all your invoicing needs. Choose the service that matches your requirement.
+            No hourly rates. No surprises. You know the full cost before we start.
         </p>
 
         <div class="pricing-card-grid">
             
-            <div class="pricing-card">
-                <div class="card-header">
-                    <i class="fas fa-envelope fa-3x"></i>
-                    <h2>Action Emails</h2>
-                    <p class="price-tag">£12.50/message</p>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        <li><i class="fas fa-check"></i> One-off invoice chase</li>
-                        <li><i class="fas fa-check"></i> Sent on your behalf to the debtor</li>
-                        <li><i class="fas fa-check"></i> Includes professional/legal tone</li>
-                        <li><i class="fas fa-check"></i> No subscriptions required</li>
-                        <li><i class="fas fa-check"></i> Help for freelancers/small teams</li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="onboarding.html" class="cta-button primary">Let's Begin</a>
-                </div>
-            </div>
-
-            <div class="pricing-card">
-                <div class="card-header">
-                    <i class="fas fa-file-invoice-dollar fa-3x"></i>
-                    <h2>Credit Control</h2>
-                    <p class="price-tag">From £90/month</p>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        <li><i class="fas fa-tag"></i> Starter £90 (Up to 10/month)</li>
-                        <li><i class="fas fa-tag"></i> Growth £170 (Up to 30/month)</li>
-                        <li><i class="fas fa-tag"></i> Full Service £250 (Unlimited)</li>
-                        <li class="tier-disclaimer"><i class="fas fa-times" style="color: #F00;"></i> Does not include invoice generation</li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="onboarding.html" class="cta-button secondary">Get Credit Control</a>
-                </div>
-            </div>
-            
             <div class="pricing-card highlighted">
                 <div class="card-header">
-                    <i class="fas fa-calculator fa-3x"></i>
-                    <h2>Invoicing Support</h2>
-                    <p class="price-tag">From £150/month</p>
+                    <i class="fas fa-file-signature fa-3x"></i>
+                    <h2>THE DISPUTE PACKAGE</h2>
+                    <p class="price-tag">£300</p>
                 </div>
                 <div class="card-body">
+                    <p style="font-weight: 700; text-align: center; margin-bottom: 1.5rem; color: var(--color-primary);">Everything we need to fight your case through formal correspondence.</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> Includes everything in Credit Control</li>
-                        <li><i class="fas fa-tag"></i> Starter £150 (Up to 10/month)</li>
-                        <li><i class="fas fa-tag"></i> Growth £250 (Up to 30/month)</li>
-                        <li><i class="fas fa-tag"></i> Full Service £350 (Unlimited)</li>
-                        <li><i class="fas fa-check"></i> The full solution for small business finance</li>
+                        <li><i class="fas fa-check"></i> Full case review</li>
+                        <li><i class="fas fa-check"></i> Up to 6 formal letters or emails to the company</li>
+                        <li><i class="fas fa-check"></i> Written on Small Debts headed paper</li>
+                        <li><i class="fas fa-check"></i> Referenced against applicable UK law</li>
+                        <li><i class="fas fa-check"></i> 14-day response deadlines set on your behalf</li>
+                        <li><i class="fas fa-check"></i> Update emails to you throughout — always free</li>
+                    </ul>
+                    <p style="font-style: italic; font-size: 0.95rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #ccc; color: #555;">
+                        If the dispute requires more than 6 letters to resolve, you can continue for a further £100 — unlimited correspondence until the matter is closed.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="dispute-service.html" class="cta-button primary">Raise A Dispute</a>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-balance-scale fa-3x"></i>
+                    <h2>COURT & MEDIATION</h2>
+                    <p class="price-tag">From £300</p>
+                </div>
+                <div class="card-body">
+                    <p style="font-weight: 700; text-align: center; margin-bottom: 1.5rem; color: var(--color-primary);">If correspondence doesn't resolve it, we take it further.</p>
+                    <ul>
+                        <li>
+                            <strong><i class="fas fa-gavel" style="color: var(--color-accent);"></i> Small Claims Court Filing — £300</strong><br>
+                            <span style="font-size: 0.95rem; color: #555;">We prepare your full claim and file it via Money Claims Online. You review and submit. Available once the correspondence stage is complete.</span>
+                        </li>
+                        <li style="margin-top: 1rem;">
+                            <strong><i class="fas fa-handshake" style="color: var(--color-accent);"></i> McKenzie Friend at Mediation — £100</strong><br>
+                            <span style="font-size: 0.95rem; color: #555;">If the court refers your case to mediation, we attend alongside you and support you through the process.</span>
+                        </li>
+                        <li style="margin-top: 1rem;">
+                            <strong><i class="fas fa-coins" style="color: var(--color-accent);"></i> Success Fee — 10% of compensation</strong><br>
+                            <span style="font-size: 0.95rem; color: #555;">Only payable if you win at mediation/court. No win means no success fee.</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="card-footer">
-                    <a href="onboarding.html" class="cta-button primary">Get Full Service</a>
+                    <a href="contact.html" class="cta-button secondary">Ask A Question</a>
                 </div>
             </div>
 
         </div>
 
-        <div class="add-ons-section">
-            <h3>Optional Add-ons</h3>
-            <div class="add-on-list">
-                <p><i class="fas fa-plus-circle"></i> Expense Logging Integration (Full Tier)</p>
-                <p><i class="fas fa-phone-volume"></i> Monthly Strategy Calls</p>
-                <p><i class="fas fa-gavel"></i> Small Claims Court Escalation (POA)</p>
-            </div>
+        <div class="add-ons-section" style="max-width: 900px; margin: 3rem auto 0; text-align: left;">
+            <h3 style="color: var(--color-accent); border-bottom: 2px solid #eee; padding-bottom: 0.5rem;"><i class="fas fa-calculator"></i> Total Cost Example</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 1rem;">
+                A dispute that goes all the way through correspondence, court filing, and mediation would cost a maximum of <strong>£500 in fixed fees</strong> (£300 + £100 + £100), plus 10% of any compensation you recover. 
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 1rem; font-weight: 700; color: var(--color-primary);">
+                Most disputes resolve at the correspondence stage.
+            </p>
         </div>
 
-        <div class="cta-bottom" style="margin-top: 3rem;">
-            <h2>Not sure which service you need?</h2>
-            <a href="contact.html#free-call" class="cta-button secondary" style="font-size: 1.2rem;">
-                Book a Free 30-Minute Call
+        <div class="cta-bottom" style="margin-top: 4rem;">
+            <h2>Not sure how to proceed?</h2>
+            <a href="contact.html" class="cta-button secondary" style="font-size: 1.2rem;">
+                Send Us A Message
             </a>
         </div>
 
@@ -188,4 +183,3 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 </body>
 </html>
-```
