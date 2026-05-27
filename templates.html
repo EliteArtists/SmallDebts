@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Not ready for a full dispute? Choose a legally worded template letter for £12.50. We personalise it and email it to you within 2 hours.">
+    
+    <title>Dispute Letter Templates — Small Debts</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZP4FBG4C8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9ZP4FBG4C8');
+</script>
+
+<style>
+    /* Specific styles for the Template Grid and Modals */
+    .template-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem;
+    }
+    
+    @media (min-width: 768px) {
+        .template-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .template-card {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .template-card:hover {
+        border-color: var(--color-accent);
+        box-shadow: 0 4px 12px rgba(0, 167, 181, 0.1);
+    }
+
+    .template-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        color: var(--color-primary);
+    }
+
+    .template-card p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
+        flex-grow: 1; /* Pushes buttons to the bottom evenly */
+    }
+
+    .template-card .price {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--color-accent);
+        margin-bottom: 1.5rem;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+        display: none; 
+        position: fixed; 
+        z-index: 999; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0,0,0,0.6); 
+        overflow-y: auto;
+        padding: 2rem 1rem;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 600px;
+        position: relative;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close-modal:hover {
+        color: #000;
+    }
+    
+    .preview-image {
+        width: 100%;
+        height: auto;
+        border: 1px solid #eee;
+        border-radius: 4px;
+    }
+</style>
+
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-content container">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Small Debts Logo" class="header-logo" />
+        </a>
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="main-navigation" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="dispute-service.html">Raise A Dispute</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="templates-intro" class="section-padded container text-center">
+        <h1 class="page-title">NOT READY FOR A FULL DISPUTE? START WITH A LETTER.</h1>
+        <p class="lead-text" style="max-width: 800px; margin: 0 auto 3rem;">
+            Choose your situation. We personalise a formal, legally worded letter on Small Debts headed paper and email it to you within 2 hours.<br><br>
+            <strong>£12.50. No subscription. No commitment.</strong>
+        </p>
+
+        <div class="template-grid">
+            
+            <div class="template-card">
+                <h3>Unfair Cancellation Fee</h3>
+                <p>Challenge a company that has charged you to cancel a contract.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Unfair Cancellation Fee')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-cancellation.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Withheld Deposit</h3>
+                <p>Challenge a landlord who has refused to return your deposit.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Withheld Deposit')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-deposit.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Disputed Mobile or Broadband Bill</h3>
+                <p>Challenge a charge on your phone or internet account.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Disputed Mobile or Broadband Bill')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-telecom.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Refused Refund — Faulty Goods</h3>
+                <p>Claim your right to a refund, repair, or replacement.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Refused Refund — Faulty Goods')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-faulty-goods.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Refused Refund — Poor Service</h3>
+                <p>Challenge a company that failed to deliver what was promised.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Refused Refund — Poor Service')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-poor-service.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Package Holiday Compensation</h3>
+                <p>Claim compensation for a holiday that didn't match what was sold.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Package Holiday Compensation')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-holiday.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Parking Fine Challenge</h3>
+                <p>Challenge an unfair private parking charge.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Parking Fine Challenge')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-parking.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Section 75 Credit Card Claim</h3>
+                <p>Claim against your credit card provider for a failed purchase.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Section 75 Credit Card Claim')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-section75.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Failed Engineer or Missed Appointment</h3>
+                <p>Recover wasted time and costs from a no-show.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Failed Engineer or Missed Appointment')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-appointment.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Gym Membership Cancellation</h3>
+                <p>Challenge a gym that won't let you cancel.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Gym Membership Cancellation')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-gym.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Energy Bill Dispute</h3>
+                <p>Challenge an incorrect or unfair energy charge.</p>
+                <span class="price">£12.50</span>
+                <div class="button-group">
+                    <button class="cta-button primary" onclick="openFormModal('Energy Bill Dispute')">GET THIS LETTER</button>
+                    <button class="cta-button secondary" onclick="openPreviewModal('preview-energy.jpg')"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="escalation-info" class="section-padded container text-center" style="background-color: #f0fdf4; border-radius: 8px; border: 1px solid #dcfce7; padding: 3rem 2rem;">
+        <h2 style="color: #166534;">IF THEY IGNORE YOUR LETTER</h2>
+        <p class="lead-text" style="max-width: 800px; margin: 0 auto 2rem;">
+            Most companies respond to a formally worded letter. If yours doesn't, that letter becomes your first piece of evidence. Come back to us and we'll take it further — full case management from £300.
+        </p>
+        <a href="pricing.html" class="cta-button primary">SEE THE DISPUTE PACKAGE</a>
+    </section>
+</main>
+
+<div id="data-modal" class="modal-overlay">
+    <div class="modal-content simple-form">
+        <span class="close-modal" onclick="closeFormModal()">&times;</span>
+        <h2 style="margin-bottom: 0.5rem; text-align: center; color: var(--color-accent);">Personalise Your Letter</h2>
+        <p id="modal-subtitle" style="text-align: center; margin-bottom: 2rem; font-weight: bold;"></p>
+        
+        <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+            
+            <input type="hidden" id="hidden-template-name" name="Template_Requested" value="">
+            
+            <input type="hidden" name="_next" value="https://www.paypal.com/ncp/payment/JW2XXBW792UJG">
+            
+            <input type="hidden" name="_subject" value="New Letter Request (£12.50)">
+
+            <fieldset class="user-details">
+                <input type="text" name="Client Name" placeholder="Your Full Name*" required>
+                <input type="email" name="Client Email" placeholder="Your Email Address*" required>
+                <input type="text" name="Client Address" placeholder="Your Address (for letter header)*" required>
+            </fieldset>
+
+            <fieldset class="issue-details">
+                <input type="text" name="Target Company" placeholder="Name of company/individual you are writing to*" required>
+                <input type="text" name="Target Address" placeholder="Their Address (Optional)">
+                <input type="text" name="Account/Ref Number" placeholder="Your Account or Reference Number (Optional)">
+                <input type="text" name="Amount in Dispute" placeholder="Amount in dispute (£) (Optional)">
+                
+                <textarea name="What Happened" rows="3" placeholder="Briefly, what happened? (2-3 sentences)*" required></textarea>
+                <textarea name="Requested Outcome" rows="2" placeholder="What outcome are you requesting?*" required></textarea>
+            </fieldset>
+
+            <button type="submit" class="cta-button primary submit-button" style="width: 100%; border: none; cursor: pointer;">
+                PROCEED TO PAYMENT — £12.50
+            </button>
+            <p style="text-align: center; font-size: 0.85rem; margin-top: 1rem; color: #666;">
+                You will be redirected to PayPal to complete your payment.
+            </p>
+        </form>
+    </div>
+</div>
+
+<div id="image-modal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closePreviewModal()">&times;</span>
+        <h2 style="text-align: center; margin-bottom: 1rem;">Template Preview</h2>
+        <img id="preview-display" class="preview-image" src="" alt="Letter Template Preview">
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-contact-bar">
+            <span class="contact-item"><strong>Call Us:</strong> <a href="tel:02080580381">0208 058 0381</a></span>
+            <span class="contact-item"><strong>Email:</strong> <a href="mailto:support@smalldebts.co.uk">support@smalldebts.co.uk</a></span>
+            <span class="contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/447412302632" target="_blank" rel="noopener noreferrer">07412 302632</a> | <a href="https://wa.me/447412302632" target="_blank" rel="noopener noreferrer">Chat with Us Now</a></span>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2025 smalldebts.co.uk - All Rights Reserved.</p>
+            <nav class="footer-nav">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+
+<script>
+    // FORM MODAL LOGIC
+    const dataModal = document.getElementById('data-modal');
+    const hiddenInput = document.getElementById('hidden-template-name');
+    const modalSubtitle = document.getElementById('modal-subtitle');
+
+    function openFormModal(templateName) {
+        hiddenInput.value = templateName;
+        modalSubtitle.innerText = "Template selected: " + templateName;
+        dataModal.style.display = 'block';
+    }
+
+    function closeFormModal() {
+        dataModal.style.display = 'none';
+    }
+
+    // IMAGE PREVIEW MODAL LOGIC
+    const imageModal = document.getElementById('image-modal');
+    const previewDisplay = document.getElementById('preview-display');
+
+    function openPreviewModal(imageFile) {
+        // Set the image src to the requested file
+        previewDisplay.src = imageFile;
+        imageModal.style.display = 'block';
+    }
+
+    function closePreviewModal() {
+        imageModal.style.display = 'none';
+        previewDisplay.src = ""; // clear it out
+    }
+
+    // Close modals if user clicks outside the white box
+    window.onclick = function(event) {
+        if (event.target == dataModal) {
+            closeFormModal();
+        }
+        if (event.target == imageModal) {
+            closePreviewModal();
+        }
+    }
+</script>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/693087192be5af1980eb90ba/1jbiovens';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+</body>
+</html>
