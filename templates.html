@@ -130,6 +130,16 @@
         border: 1px solid #eee;
         border-radius: 4px;
     }
+
+    /* Styles for dynamic form labels */
+    .field-label {
+        display: block;
+        text-align: left;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #555;
+        margin-bottom: 0.25rem;
+    }
 </style>
 
 </head>
@@ -304,22 +314,148 @@
             <input type="hidden" name="_subject" value="New Letter Request (£12.50)">
 
             <fieldset class="user-details">
+                <legend>Your Details</legend>
                 <input type="text" name="Client Name" placeholder="Your Full Name*" required>
                 <input type="email" name="Client Email" placeholder="Your Email Address*" required>
                 <input type="text" name="Client Address" placeholder="Your Address (for letter header)*" required>
             </fieldset>
 
             <fieldset class="issue-details">
-                <input type="text" name="Target Company" placeholder="Name of company/individual you are writing to*" required>
-                <input type="text" name="Target Address" placeholder="Their Address (Optional)">
-                <input type="text" name="Account/Ref Number" placeholder="Your Account or Reference Number (Optional)">
+                <legend>General Details</legend>
+                <input type="text" name="Target Company" placeholder="Name of company or person you are writing to*" required>
+                <input type="text" name="Target Address" placeholder="Their address (Optional)">
+                <input type="text" name="Account/Ref Number" placeholder="Your account or reference number (Optional)">
                 <input type="text" name="Amount in Dispute" placeholder="Amount in dispute (£) (Optional)">
-                
-                <textarea name="What Happened" rows="3" placeholder="Briefly, what happened? (2-3 sentences)*" required></textarea>
-                <textarea name="Requested Outcome" rows="2" placeholder="What outcome are you requesting?*" required></textarea>
             </fieldset>
 
-            <button type="submit" class="cta-button primary submit-button" style="width: 100%; border: none; cursor: pointer;">
+            <div id="dynamic-fields-container">
+                
+                <fieldset class="dynamic-block" data-template="Unfair Cancellation Fee" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Service Signed Up For" placeholder="What service or product did you sign up for?*" disabled required>
+                    <label class="field-label">Date you entered the contract*</label>
+                    <input type="date" name="Date Entered Contract" disabled required>
+                    <label class="field-label">Date you gave notice to cancel*</label>
+                    <input type="date" name="Date Notice Given" disabled required>
+                    <textarea name="Reason Given for Fee" rows="3" placeholder="What reason, if any, did the company give for charging the fee?*" disabled required></textarea>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Withheld Deposit" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Rented Property Address" placeholder="Address of the rented property*" disabled required>
+                    <label class="field-label">Tenancy start date*</label>
+                    <input type="date" name="Tenancy Start Date" disabled required>
+                    <label class="field-label">Tenancy end date*</label>
+                    <input type="date" name="Tenancy End Date" disabled required>
+                    <label class="field-label">Date deposit was paid*</label>
+                    <input type="date" name="Date Deposit Paid" disabled required>
+                    <input type="text" name="Landlord Name" placeholder="Full name of landlord or letting agent*" disabled required>
+                    <textarea name="Proposed Deductions" rows="3" placeholder="Has the landlord proposed specific deductions, or simply kept the whole deposit?*" disabled required></textarea>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Disputed Mobile or Broadband Bill" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Monthly Contracted Charge" placeholder="What is your monthly contracted charge? (£)*" disabled required>
+                    <input type="text" name="Disputed Period" placeholder="What period or charge is being disputed?*" disabled required>
+                    <label class="field-label">Date you first complained to the company*</label>
+                    <input type="date" name="Date First Complained" disabled required>
+                    <label class="field-label">Date you entered the contract (Optional)</label>
+                    <input type="date" name="Date Entered Contract" disabled>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Refused Refund — Faulty Goods" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Item Description" placeholder="Description of the item purchased*" disabled required>
+                    <label class="field-label">Date of purchase*</label>
+                    <input type="date" name="Date of Purchase" disabled required>
+                    <label class="field-label">Date the fault was discovered*</label>
+                    <input type="date" name="Date Fault Discovered" disabled required>
+                    <textarea name="Fault Description" rows="3" placeholder="Describe the fault*" disabled required></textarea>
+                    <label class="field-label">Date you complained to the company*</label>
+                    <input type="date" name="Date Complained" disabled required>
+                    <textarea name="Reason for Refusal" rows="3" placeholder="What reason did the company give for refusing a refund?*" disabled required></textarea>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Refused Refund — Poor Service" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Service Description" placeholder="Description of the service you paid for*" disabled required>
+                    <label class="field-label">Date the service was carried out*</label>
+                    <input type="date" name="Date Service Carried Out" disabled required>
+                    <textarea name="What Went Wrong" rows="3" placeholder="What specifically went wrong?*" disabled required></textarea>
+                    <label class="field-label">Date you complained to the company*</label>
+                    <input type="date" name="Date Complained" disabled required>
+                    <textarea name="Reason for Refusal" rows="3" placeholder="What reason did the company give for refusing a refund?*" disabled required></textarea>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Package Holiday Compensation" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Hotel Name" placeholder="Name of hotel or resort*" disabled required>
+                    <label class="field-label">Date of travel (outbound)*</label>
+                    <input type="date" name="Date of Travel" disabled required>
+                    <input type="text" name="Number of Nights" placeholder="Number of nights*" disabled required>
+                    <input type="text" name="Total Price Paid" placeholder="Total price paid for the holiday (£)*" disabled required>
+                    <label class="field-label">Date booking was made*</label>
+                    <input type="date" name="Date Booking Made" disabled required>
+                    <textarea name="What Went Wrong" rows="3" placeholder="Describe what went wrong during the holiday*" disabled required></textarea>
+                    <input type="text" name="When Complained" placeholder="Date you complained (during holiday, on return, or both)*" disabled required>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Parking Fine Challenge" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Vehicle Registration" placeholder="Vehicle registration number*" disabled required>
+                    <input type="text" name="PCN Reference" placeholder="PCN reference number (if different from account above)" disabled>
+                    <label class="field-label">Date of the alleged contravention*</label>
+                    <input type="date" name="Date of Contravention" disabled required>
+                    <input type="text" name="Car Park Location" placeholder="Location of the car park*" disabled required>
+                    <textarea name="Reason for Challenge" rows="3" placeholder="Why are you challenging? (e.g. no signs, paid correctly)*" disabled required></textarea>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Section 75 Credit Card Claim" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <input type="text" name="Merchant Name" placeholder="Name of merchant or supplier who failed you*" disabled required>
+                    <input type="text" name="Purchase Description" placeholder="Description of what you purchased*" disabled required>
+                    <label class="field-label">Date of purchase*</label>
+                    <input type="date" name="Date of Purchase" disabled required>
+                    <textarea name="Supplier Failure" rows="3" placeholder="What did the supplier do wrong?*" disabled required></textarea>
+                    <label class="field-label">Date you submitted S75 claim to card company*</label>
+                    <input type="date" name="Date Claim Submitted" disabled required>
+                    <textarea name="Reason for Refusal" rows="3" placeholder="What reason did the card company give for refusing?*" disabled required></textarea>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Failed Engineer or Missed Appointment" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <label class="field-label">Date of the booked appointment*</label>
+                    <input type="date" name="Date of Appointment" disabled required>
+                    <input type="text" name="Time Window" placeholder="Appointment time window (e.g. 8am–1pm)*" disabled required>
+                    <textarea name="What Happened" rows="3" placeholder="What happened? (e.g. no one came, cancelled same morning)*" disabled required></textarea>
+                    <input type="text" name="Hours Wasted" placeholder="How many hours did you waste?*" disabled required>
+                    <input type="text" name="Hourly Rate" placeholder="Your hourly rate for the wasted time (£)*" disabled required>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Gym Membership Cancellation" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <label class="field-label">Date you signed up*</label>
+                    <input type="date" name="Date Signed Up" disabled required>
+                    <input type="text" name="Monthly Fee" placeholder="Monthly membership fee (£)*" disabled required>
+                    <label class="field-label">Date you requested cancellation*</label>
+                    <input type="date" name="Date Requested Cancellation" disabled required>
+                    <textarea name="Reason for Cancellation" rows="3" placeholder="Reason for cancellation (e.g. moved away, medical)*" disabled required></textarea>
+                    <textarea name="Reason for Refusal" rows="3" placeholder="What reason did the gym give for refusing?*" disabled required></textarea>
+                    <input type="text" name="Amount Charged After Request" placeholder="Total amount charged after your cancellation request (£)*" disabled required>
+                </fieldset>
+
+                <fieldset class="dynamic-block" data-template="Energy Bill Dispute" style="display:none;">
+                    <legend>Specific Details</legend>
+                    <textarea name="What is Disputed" rows="3" placeholder="What exactly is being disputed?*" disabled required></textarea>
+                    <input type="text" name="Billing Period" placeholder="Billing period being disputed (e.g. Jan 2024 to Mar 2025)*" disabled required>
+                    <label class="field-label">Date you complained to the supplier*</label>
+                    <input type="date" name="Date Complained" disabled required>
+                    <textarea name="Supplier Response" rows="3" placeholder="Has the supplier responded? If so, what did they say? (Optional)" disabled></textarea>
+                </fieldset>
+
+            </div>
+
+            <button type="submit" class="cta-button primary submit-button" style="width: 100%; border: none; cursor: pointer; margin-top: 1rem;">
                 PROCEED TO PAYMENT — £12.50
             </button>
             <p style="text-align: center; font-size: 0.85rem; margin-top: 1rem; color: #666;">
@@ -365,6 +501,23 @@
     function openFormModal(templateName) {
         hiddenInput.value = templateName;
         modalSubtitle.innerText = "Template selected: " + templateName;
+        
+        // Hide all dynamic blocks and disable their inputs so they aren't required/submitted
+        const allBlocks = document.querySelectorAll('.dynamic-block');
+        allBlocks.forEach(block => {
+            block.style.display = 'none';
+            const inputs = block.querySelectorAll('input, textarea');
+            inputs.forEach(input => input.disabled = true);
+        });
+
+        // Find the specific block for this template, show it, and enable its inputs
+        const targetBlock = document.querySelector(`.dynamic-block[data-template="${templateName}"]`);
+        if (targetBlock) {
+            targetBlock.style.display = 'block';
+            const targetInputs = targetBlock.querySelectorAll('input, textarea');
+            targetInputs.forEach(input => input.disabled = false);
+        }
+
         dataModal.style.display = 'block';
     }
 
@@ -377,14 +530,13 @@
     const previewDisplay = document.getElementById('preview-display');
 
     function openPreviewModal(imageFile) {
-        // Set the image src to the requested file
         previewDisplay.src = imageFile;
         imageModal.style.display = 'block';
     }
 
     function closePreviewModal() {
         imageModal.style.display = 'none';
-        previewDisplay.src = ""; // clear it out
+        previewDisplay.src = ""; 
     }
 
     // Close modals if user clicks outside the white box
