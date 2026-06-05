@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Use this simple form to submit details about your complaint or debt recovery case for the £12.50 email service.">
+    <!-- FIXED: Removed references to the old £12.50 service -->
+    <meta name="description" content="Use this simple form to submit details about your complaint or debt recovery case for our formal dispute service.">
     
     <title>Dispute Service — Small Debts</title>
 
@@ -55,7 +56,8 @@
 
 <main>
     <section id="tell-us-form" class="section-padded container">
-        <h1 class="page-title text-center">Dispute Service</h1>
+        <!-- FIXED TYPO: Dispute Service Title Case -->
+        <h1 class="page-title text-center">Raise A Dispute</h1>
         
         <div class="video-wrapper" style="max-width: 800px; margin: 0 auto 2rem auto;">
             <iframe 
@@ -80,6 +82,7 @@
             </p>
         </div>
 
+        <!-- NOTE: If you decide later to force direct redirect payment, add your Formspree endpoint and your PayPal payment link hidden input here -->
         <form name="DisputeServiceForm" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="/dispute-success.html" class="simple-form">
             
             <input type="hidden" name="form-name" value="DisputeServiceForm" />
